@@ -169,7 +169,7 @@
 			</p>
 		</div>
 	</div>
-	<!-- <input type=text name="pass" id="pass" value=<?php echo $pass;?>>
+	<!-- <input type=text name="pass" id="pass" value=<?php echo $passs;?>>
 	<input type="text" name="user" id="user" value=<?php echo $bm.'-'.$name;?>>
 	<input type="text" name="lev" id="lev" value=<?php echo $_SESSION['lev'];?>> -->
 
