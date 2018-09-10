@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>首页--layui后台管理模板</title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../layui225/css/layui.css" media="all">
+	<style>
+		.zdy{
+			height: 80px;
+			margin-top:5px;
+		}
+		#jcr{
+			width: 120px;
+		}
+		.row{
+			padding:5px 0;
+		}
+		.layui-input{
+			width: 180px;
+			text-align: center;
+		}
+		.layui-form-label{
+			font-family: "微软雅黑", Verdana;
+			font-size: 15px;
+			text-align: center;
+			padding:9px 5px 9px 5px;
+			width:70px;
+		}
+		#zrdw{
+			width: 110px;
+			padding-right: 0px;
+		}
+		.recommend{
+			width: 80px;
+		}
+		#page{
+			margin-top: -10px;
+		}
+	</style>
+</head>
+<body class="childrenBody">
+<form class="layui-form" id="form1" method="post" >
+<blockquote class="layui-elem-quote zdy">
+	<div class="layui-block row">
+		<!--1行1 责任单位-->
+		<div class="layui-inline" >
+			<label class="layui-form-label">责任单位</label>
+			<div class="layui-input-inline">
+				<select name="zrdw" id="zrdw" lay-search>
+					<?php foreach ($lev==1?$zrdw:$my_zrdw as $key=>$value) {?>
+					<option value=<?php echo $value;?>><?php echo $value;?></option>
+					<?php }?>
+				</select>
+			</div>
+		</div>
+		<!--1行2 检查日期-->
+		<div class="layui-inline" >
+			<label class="layui-form-label">检查日期</label>
+			<div class="layui-input-inline">
+				<input type="text" name="jc_date"   class="layui-input" id="jc_date"  readonly="readonly" value="<?php echo date('Y-m-d',time()-2592000).' ~ '.date('Y-m-d',time());?>"/>
+			</div>
+		</div>
+		<!--一行三 检查人-->
+		<div class="layui-inline">
+			<label class="layui-form-label" >检查人</label>
+			<div class="layui-input-inline">
+				<select name="jcr" id="jcr" lay-search>
+					<option value="">请选择</option>
+					<?php foreach ($jcr as $key=>$value) {?>
+					<option value=<?php echo $value['jcr'];?>><?php echo $value['jcr'];?></option>
+					<?php }?>
+				</select>
+			</div>
+		</div>
+		<!--一行四 整改情况-->
+		<div class="layui-inline">
+			<label class="layui-form-label" >整改情况</label>
+			<div class="layui-input-inline">
+				<select name="zgqk" id="zgqk" lay-search>
+					<option value="">请选择</option>
+					<option value="未完成">未完成</option>
+					<option value="已完成">已完成</option>
+				</select>
+			</div>
+		</div>
+		<!--一行五 考核-->
+		<div class="layui-inline">
+			<div class="layui-input-inline">
+				&nbsp;&nbsp;
+				<input type="checkbox" name="is_kh" title="考核">
+				<input type="checkbox" name="is_zdwt" title="重点">
+				<input type="checkbox" name="is_out" title="超限">
+			</div>
+		</div>
+	</div>
+
+	<!--搜索第二行 -->
+	<!--2行1 问题区段-->
+	<div class="layui-block">
+		<div class="layui-inline" >
+			<label class="layui-form-label">问题区段</label>
+			<div class="layui-input-inline">
+				<select name="wt_qd" id="wt_qd" lay-search>
+					<option value="">请选择问题区段</option>
+					<?php foreach ($wt_qd as $key=>$value) {?>
+					<option value=<?php echo $value;?>><?php echo $value;?></option>
+					<?php }?>
+				</select>
+			</div>
+		</div>
+		<!--2行2 问题分类-->
+		<div class="layui-inline" >
+			<label class="layui-form-label">问题分类</label>
+			<div class="layui-input-inline">
+				<select name="wt_fl" id="wt_fl" lay-search>
+					<option value="">请选择问题分类</option>
+					<?php foreach ($wt_fl as $key=>$value) {?>
+					<option value=<?php echo $value;?>><?php echo $value;?></option>
+					<?php }?>
+				</select>
+			</div>
+		</div>
+		<!--2行3 专业类别-->
+		<div class="layui-inline">
+			<label class="layui-form-label" >专业类别</label>
+			<div class="layui-input-inline">
+				<select name="zylb" id="zylb" lay-search>
+					<option value="">请选择专业类别</option>
+					<?php foreach ($zylb as $key=>$value) {?>
+					<option value=<?php echo $value;?>><?php echo $value;?></option>
+					<?php }?>
+				</select>
+			</div>
+		</div>
+		<!--2行3 考核类别-->
+		<div class="layui-inline">
+			<label class="layui-form-label" >考核类别</label>
+			<div class="layui-input-inline">
+				<select name="kh_lb" id="kh_lb" lay-search>
+					<option value="">请选择专业类别</option>
+					<?php foreach ($kh_lb as $key=>$value) {?>
+					<option value=<?php echo $value;?>><?php echo $value;?></option>
+					<?php }?>
+				</select>
+			</div>
+		</div>
+		<!--2行3 专业类别-->
+		<div class="layui-inline">&nbsp;&nbsp;
+			<div class="layui-input-inline">
+				<a class="layui-btn recommend" style="background-color:#5FB878" lay-submit lay-filter="query">查询</a>
+				<input class="layui-btn recommend" type="reset" style="background-color:#1E9FFF">
+				<a class="layui-btn recommend" lay-submit lay-filter="excel" style="background-color:#FF5722" id="excel">导出</a>
+			</div>
+		</div>
+	</div>
+</blockquote>
+</form>
+<div id="page">
+	<table id="test1" lay-filter="test" lay-data="idTest"></table>
+</div>
+<script type="text/javascript" src="../../layui225/layui.js"></script>
+<script>
+    layui.use(['layer','jquery','table','laydate','form'],function() {
+        var layer = layui.layer,
+            table = layui.table,
+            form = layui.form,
+            laydate = layui.laydate,
+            $ = layui.$;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#jc_date', //指定元素
+            range: '~',
+            btns: ['confirm'],
+            theme: '#393D49',
+            calendar: true,
+        });
+    //    监听查询
+		form.on('submit(query)',function (data) {
+            var tt=null; //定义全局变量，为了能在修改数据后自动重载表格数据
+            tt = table.render({
+                id: 'idTest',
+                elem:'#test1', //绑定表格id
+                url:'wtk_query_ok.php', //定义数据接口，默认传2个值，一个是page,一个是limit
+                where:data.field,
+                method:'post',
+                height: 'full-130',
+                page:{theme:'#e78',groups:10,limit:20,prev:'前一页'
+                    ,next:'后一页'}, //定义分页效果
+                limits:[10,20,30,40,50,60,70,80,90,100],
+                cols:[[ //定义表头样式
+                    {checkbox: true,fixed:'left',LAY_CHECKED:false}
+                    ,{field: 'id', title: 'ID', width:85, sort: true, fixed: 'left',align:'center',unresize:true,templet:'<div><a href="javascript:;" class="layui-table-link" onclick=layer.open({type:2,title:"问题详情",area:["1150px","550px"],maxmin:1,btn:["关闭"],content:"view_wtk.php?id={{d.id}}"})>{{d.id}}</a></div>'}
+                    ,{field: 'zrdw', title: '责任单位', width:120, fixed: 'left',align:'center'}
+                    ,{field: 'jcr', title: '检查人', width:90, fixed: 'left',align:'center'}
+                    ,{field: 'jc_date', title: '检查日期',width:110,sort: true,event:'jcdate',align:'center'}
+                    ,{field: 'zg_date', title: '应整改日期', width: 110,align:'center',sort: true}
+                    ,{field: 'xh_date', title: '销号日期', width: 120,align:'center',sort: true}
+                    ,{field: 'wt_qd', title: '问题区段', width:150,align:'center'}
+                    ,{field: 'wt_fl', title: '问题分类', width:90,align:'center'}
+                    ,{field: 'zylb', title: '专业类别', width:90,align:'center'}
+                    ,{field: 'zrr', title: '责任人', width: 90,align:'center'}
+                    ,{field: 'jtwt', title: '具体问题', width: 150,align:'center',templet:function (d) {
+                            return '<a href="javascript:;">'+ d.jtwt +'</a>';
+                        }}
+                    ,{field: 'zgcs', title: '整改措施', width: 150,align:'center'}
+                    ,{field: 'zgqk', title: '<p style="color:red;">整改</p>', width: 50,align:'center',sort: true}
+                    ,{field: 'is_kh', title: '<p style="color:red;">考核</p>', width:50,align:'center'}
+                    ,{field: 'is_out', title: '<p style="color:red;">超限</p>', width:50,align:'center'}
+                    ,{title: '操作', align:'center', toolbar: '#barDemo',width: <?php echo $lev==1?'240':'90'?>} //这里的toolbar值是模板元素的选择器
+                ]],
+                done:function (res, curr, count) {
+                },
+                even:0,  //是否开启隔行换色
+                size:'md' //表格大小控制
+            })
+			//监听操作按钮
+            table.on('tool(test)', function(obj){ //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
+                var data = obj.data; //获得当前行数据
+                var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
+                var tr = obj.tr; //获得当前行 tr 的DOM对象
+                if(layEvent === 'detail'){ //查看
+                    layer.open({
+                        type:2,
+                        title:'问题详情',
+                        area:['1150px','550px'],
+                        closeBtn:1,
+                        btn:['关闭'],
+                        shadeClose:1,
+                        maxmin:true,
+                        content:'view_wtk.php?id='+data.id
+                    })
+                }else if(layEvent === 'edit'){ //整改
+                    var cs = 0;
+                    var index = layer.open({
+                        type:2,
+                        anim: 0,
+                        title:'问题整改',
+                        area:['1150px','550px'],
+                        shade: [0.8, '#393D49'],
+                        closeBtn:1,
+                        fixed:1, //固定可视区
+                        maxmin:true,
+						max:true,
+                        btn:['关闭'],
+                        content:'modify_wtk.php?id='+data.id,
+                        yes:function () {
+                            cs=1;
+                            layer.close(index);
+                        },
+                        cancel:function () {
+                            cs=1;
+                            layer.close(index);
+                        },
+                        end:function () {
+                            if (cs==0){
+                                tt.reload();
+                            }
+                        }
+                    })
+					layer.full(index);
+                } else if(layEvent === 'del'){ //删除
+                    layer.confirm('真的要删除这条数据吗？', function(index){
+                        //向服务端发送删除指令
+                        $.post("del_wtk_data_ajax.php",{'id':data.id},function (data) {
+                            if (data=='yes'){
+                                layer.msg('删除成功',{icon:1});
+                                obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
+                                layer.close(index);
+                                //todo 此处应该把删除操作记录到日志中
+                            }else{
+                                layer.msg('删除失败',{icon:2});
+                            }
+                        })
+                    });
+                }
+            });
+            if (<?php echo $lev;?>){
+                var wg = '<a class="layui-btn layui-bg-green layui-btn-sm" lay-event="detail"><i class="layui-icon">&#xe660;</i>查看</a><a class="layui-btn layui-bg-cyan layui-btn-sm" lay-event="edit"><i class="layui-icon">&#xe6b2;</i>修改</a><a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="del"><i class="layui-icon">&#xe640;</i>删除</a>';
+            }else if(<?php echo $lev;?>=='dzg'){
+                var wg =  '<a class="layui-btn layui-bg-green layui-btn-sm" lay-event="detail"><i class="layui-icon">&#xe660;</i> 查 看</a><a class="layui-btn layui-bg-cyan layui-btn-sm" lay-event="edit"><i class="layui-icon">&#xe631;</i> 整 改</a>';
+            }else{
+                var wg ='<a class="layui-btn layui-bg-green layui-btn-sm" lay-event="detail"><i class="layui-icon">&#xe660;</i>查看</a>';
+            }
+            $("#barDemo").html(wg);
+        })
+        form.on('submit(excel)',function (data) {
+            data.form.action='./wtk_to_excel.php';
+            data.form.method='POST';
+            data.form.submit();
+        })
+    })
+</script>
+<script type="text/html" id="barDemo">
+
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>考核项点</title>
+    <style>
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th { margin:0; padding:0; }
+        .clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
+        .clearfix { *zoom:1; }
+        body{
+            font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft YaHeI UI","Microsoft YaHei",SimHei,"\5B8B\4F53",SimSun,sans-serif;
+        }
+        #wrap{
+            width: 100%;
+            margin: 0 auto;
+
+        }
+        .header{
+            text-align: center;padding:20px 0;
+        }
+        th,tr,td{
+            text-align: center;
+            vertical-align: middle;
+            height: 40px;
+            
+        }
+        tr:hover{
+            background-color: orangered;
+        }
+    </style>
+</head>
+<link rel="stylesheet" href="../../bs3/css/bootstrap.min.css">
+<script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
+<script src="../../bs3/js/bootstrap.min.js"></script>
+<script src="../../layer/layer.js"></script>
+<body>
+<div id="wrap">
+    <div class="header">
+        <h1><img src="../img/khbz.png" alt=""></h1>
+    </div>
+    <div class="content">
+        <table class="table table-bordered">
+            <th style="text-align: center"  width="5%">序号</th>
+            <th style="text-align: center" width="8%">考核类别</th>
+            <th style="text-align: center" width="8%">问题分类</th>
+            <th style="text-align: center" width="5%">编号</th>
+            <th style="text-align: center">问题内容</th>
+            <th style="text-align: center" width="5%">减分标准</th>
+            <th style="text-align: center" width="8%">考核依据</th>
+            <?php foreach($khxd_data as $value){?>
+                <tr>
+                    <td><?php echo $value['id'];?></td>
+                    <td><?php echo $value['khlb'];?></td>
+                    <td><?php echo $value['wtfl'];?></td>
+                    <td><?php echo $value['bh'];?></td>
+                    <td><?php echo $value['wtnr'];?></td>
+                    <td><?php echo $value['jfbz'];?></td>
+                    <td><?php echo $value['khyj'];?></td>
+                </tr>
+            <?php }?>
+        </table>
+    </div>
+
+</div>
+</body>
+</html>

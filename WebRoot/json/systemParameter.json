@@ -1,0 +1,14 @@
+{
+    "cmsName": "layui后台管理模版",
+    "version": "v1.0",
+    "author": "吴戈 Mark_W",
+    "homePage": "login.php",
+    "server": "windows",
+    "dataBase": "MYSQL 5.6.12",
+    "maxUpload": "50M",
+    "userRights": "总管理员",
+    "description": "",
+    "powerby": "c",
+    "record": "",
+    "keywords": ""
+}

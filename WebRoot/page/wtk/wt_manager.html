@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>首页--layui后台管理模板</title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="./layui/css/layui.css" media="all">
+	<link rel="stylesheet" href="../../css/main.css" media="all" />
+</head>
+<body class="childrenBody">
+	<div class="panel_box row">
+		<div class="panel col">
+			<a href="javascript:;" onclick="wt_count({});">
+				<div class="panel_icon">
+					<i class="layui-icon" data-icon="&#xe63c;">&#xe63c;</i>
+				</div>
+				<div class="panel_word newMessage">
+					<span><?php echo $wt_count;?></span>
+					<cite>问题总数</cite>
+				</div>
+			</a>
+		</div>
+		<div class="panel col">
+			<a href="javascript:;" onclick="wt_count({'month':''})">
+				<div class="panel_icon" style="background-color:#FF5722;">
+					<!--<i class="iconfont icon-dongtaifensishu" data-icon="icon-dongtaifensishu"></i>-->
+					<i class="layui-icon" data-icon="&#xe654;">&#xe654;</i>
+				</div>
+				<div class="panel_word userAll">
+					<span><?php echo $month_count;?></span>
+					<cite>本月新增</cite>
+				</div>
+			</a>
+		</div>
+		<div class="panel col">
+			<a href="javascript:;" onclick="wt_count({'important':''})">
+				<div class="panel_icon" style="background-color:#009688;">
+					<i class="layui-icon" data-icon="&#xe637;">&#xe637;</i>
+				</div>
+				<div class="panel_word userAll">
+					<span><?php echo $important_wt;?></span>
+					<cite>重点问题</cite>
+				</div>
+			</a>
+		</div>
+		<div class="panel col">
+			<a href="javascript:;" onclick="wt_count({'assessment':''})">
+				<div class="panel_icon" style="background-color:#5FB878;">
+					<i class="layui-icon" data-icon="&#xe613;">&#xe613;</i>
+				</div>
+				<div class="panel_word imgAll">
+					<span><?php echo $kh_wt;?></span>
+					<cite>考核问题</cite>
+				</div>
+			</a>
+		</div>
+		<div class="panel col" >
+			<a href="javascript:;" id="dzg" data-type="dzg" onclick="wt_count({'dzg':''},'dzg')">
+				<div class="panel_icon" style="background-color:#F7B824;">
+					<i class="layui-icon" data-icon="&#xe6b2;">&#xe6b2;</i>
+				</div>
+				<div class="panel_word imgAll">
+					<span><?php echo $wzg_wt;?></span>
+					<cite>待整改问题</cite>
+				</div>
+			</a>
+		</div>
+		<div class="panel col max_panel">
+			<a href="javascript:;" onclick="wt_count({'yzg':''})">
+				<div class="panel_icon" style="background-color:#2F4056;">
+					<i class="layui-icon" data-icon="&#xe705;">&#xe705;</i>
+				</div>
+				<div class="panel_word allNews">
+					<span><?php echo $yzg_wt;?></span>
+					<em>已整改问题</em>
+					<!--<cite>文章列表</cite>-->
+				</div>
+			</a>
+		</div>
+	</div>
+	<table id="test1" lay-filter="test" lay-data="idTest"></table>
+	<script src="../../layui225/layui.js"></script>
+	<script src="../../js/main.js"></script>
+<!--开始-->
+	<script>
+		var v=0;
+		//初始化为待整改页面
+		wt_count({'dzg':''});
+        function wt_count(value,lev) {
+            layui.use(['layer','table','element','form','laydate'],function () {
+                var table = layui.table
+                    ,layer = layui.layer
+                    ,form= layui.form
+                    ,laydate = layui.laydate
+                    ,element = layui.element
+                    ,$ = layui.$;
+                var tt=null; //定义全局变量，为了能在修改数据后自动重载表格数据
+                //表单
+                tt = table.render({
+                    id: 'idTest',
+                    elem:'#test1', //绑定表格id
+                    url:'wt_count_interface.php', //定义数据接口，默认传2个值，一个是page,一个是limit
+                    where:value,
+                    method:'post',
+                    height: 'full-130',
+                    page:{theme:'#e78',groups:10,limit:20,prev:'前一页'
+                        ,next:'后一页'}, //定义分页效果
+                    limits:[10,20,30,40,50,60,70,80,90,100],
+                    cols:[[ //定义表头样式
+                        {checkbox: true,fixed:'left',LAY_CHECKED:false}
+                        ,{field: 'id', title: 'ID', width:80, sort: true, fixed: 'left',align:'center',unresize:true}
+                        ,{field: 'jcr', title: '检查人', width:90, fixed: 'left',align:'center'}
+                        ,{field: 'jc_date', title: '检查日期',width:110,sort: true,event:'jcdate',align:'center'}
+                        ,{field: 'zg_date', title: '整改日期', width: 110,align:'center'}
+                        ,{field: 'wt_ly', title: '问题来源', width: 100,align:'center'}
+                        ,{field: 'wt_qd', title: '区段', width:150,align:'center'}
+                        ,{field: 'zrr', title: '责任人', width: 90,edit:'text',align:'center'}
+                        ,{field: 'is_kh', title: '考核', width:70,align:'center'}
+
+                        ,{field: 'jtwt', title: '具体问题', width: 220,align:'center'}
+                        ,{field: 'zgcs', title: '整改措施', width: 220,align:'center'}
+                        ,{field: 'zgqk', title: '整改情况', width: 93,align:'center',sort: true}
+                        ,{title: '操作', align:'center', toolbar: '#barDemo',width: 225} //这里的toolbar值是模板元素的选择器
+                    ]],
+                    done:function (res, curr, count) {
+                    },
+                    even:0,  //是否开启隔行换色
+                    size:'md' //表格大小控制
+                })
+                //监听复选框
+                table.on('checkbox(test)', function(obj){
+                    // console.log(obj.data); //{checked: true, data: {…}, type: "one"}
+                    // console.log(obj.checked); //当前是否选中状态
+                    // console.log(obj.type); //如果触发的是全选，则为：all，如果触发的是单选，则为：one
+                });
+                //监听单元格编辑
+                table.on('edit(test)',function (obj) {
+                    var zrr = obj.value;
+                    var index =  layer.confirm('确认要将责任人修改为( '+zrr+' )吗？',function () {
+                        $.post('cell_edit.php',obj,function (data) {
+                            if (data==1){
+                                layer.msg('修改成功');
+                                layer.close(index);
+                            }
+                        })
+                    })
+                })
+                //监听排序切换
+                table.on('sort(test)',function (obj) {
+                    console.log(obj); //{field: "id", type: "asc"} 、{field: "jc_date", type: "desc"}
+                })
+                //表格的重载
+                $("#reload").click(function () {
+                    table.reload('idTest',{
+                        url:'1.php',
+                        where:{jcr:'王越'}
+                    })
+                })
+                //监听工具条
+                table.on('tool(test)', function(obj){ //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
+
+                    var data = obj.data; //获得当前行数据
+                    var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
+                    var tr = obj.tr; //获得当前行 tr 的DOM对象
+                    if(layEvent === 'detail'){ //查看
+                        layer.open({
+                            type:2,
+							title:'问题详情',
+                            area:['1150px','550px'],
+                            closeBtn:1,
+                            btn:['关闭'],
+							shadeClose:1,
+                            maxmin:true,
+                            content:'view_wtk.php?id='+data.id
+                        })
+                    }else if(layEvent === 'zg'){ //整改
+						var cs = 0;
+                        var index = layer.open({
+                            type:2,
+                            anim: 4,
+                            title:'问题整改',
+                            area:['1150px','550px'],
+                            shade: [0.8, '#393D49'],
+                            closeBtn:1,
+                            fixed:1, //固定可视区
+                            maxmin:true,
+                            btn:['关闭'],
+                            content:'zg_wtk.php?id='+data.id,
+                            yes:function () {
+                                cs=1;
+                                layer.close(index);
+                                wt_count({'dzg':''});
+                            },
+							cancel:function () {
+                                cs=1;
+                                layer.close(index);
+                                wt_count({'dzg':''});
+                            },
+							end:function () {
+                                if (cs==0){
+                                	window.location.reload();
+                                }
+                            }
+                        })
+
+                    } else if(layEvent === 'del'){ //删除
+                        layer.confirm('真的要删除这条数据吗？', function(index){
+                            //向服务端发送删除指令
+                            $.post("del_wtk_data_ajax.php",{'id':data.id},function (data) {
+                                if (data=='yes'){
+                                    layer.msg('删除成功',{icon:1});
+                                    obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
+                                    layer.close(index);
+                                //todo 此处应该把删除操作记录到日志中
+                                }else{
+                                    layer.msg('删除失败',{icon:2});
+                                }
+                            })
+                        });
+                    } else if(layEvent === 'edit'){ //编辑
+                        //do something
+                        var index = layer.open({
+                            type:2,
+                            area:['500px','300px'],
+                            closeBtn:1,
+//                    btn:['返回并刷新数据'],
+                            content:'edit_data.php?id='+data.id,
+                            end:function () {
+//                        窗口被关闭后，刷新表格数据
+                                tt.reload({
+                                })
+                            }
+                        })
+                    }
+                });
+
+                if (<?php echo $lev;?>){
+                    var wg = '<a class="layui-btn layui-bg-green layui-btn-sm" lay-event="detail"><i class="layui-icon">&#xe660;</i>查看</a><a class="layui-btn layui-bg-cyan layui-btn-sm" lay-event="zg"><i class="layui-icon">&#xe6b2;</i>整改</a><a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="del"><i class="layui-icon">&#xe640;</i>删除</a>';
+                }else if(lev=='dzg'){
+                    var wg =  '<a class="layui-btn layui-bg-green layui-btn-sm" lay-event="detail"><i class="layui-icon">&#xe660;</i> 查 看</a><a class="layui-btn layui-bg-cyan layui-btn-sm" lay-event="zg"><i class="layui-icon">&#xe631;</i> 整 改</a>';
+                }else{
+                    var wg ='<a class="layui-btn layui-bg-green layui-btn-sm" lay-event="detail" style="width: 90px;"><i class="layui-icon">&#xe660;</i>查看</a>';
+                }
+                $("#barDemo").html(wg);
+            })
+        }
+	</script>
+
+	<!--id为设置表头时toolbar属性设置的#barDemo-->
+	<script type="text/html" id="barDemo">
+
+
+	</script>
+
+</body>
+</html>

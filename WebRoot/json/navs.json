@@ -1,0 +1,70 @@
+[{
+	"title" : "后台首页",
+	"icon" : "icon-computer",
+	"href" : "page/main.html",
+	"spread" : false,
+	"lev":"main"
+},{
+	"title" : "问题库管理",
+	"icon" : "&#xe630;",
+	"href" : "",
+	"spread" : false,
+	"lev":"wtk",
+	"children" : [
+		{
+			"title" : "问题录入",
+			"icon" : "&#xe654;",
+			"href" : "page/wtk/wtk_add.php",
+			"spread" : false,
+			"lev":"wtk-1"
+		},
+		{
+			"title" : "问题管理",
+			"icon" : "&#xe63c;",
+			"href" : "page/wtk/wtk_manager.php",
+			"spread" : false,
+			"lev":"wtk-2"
+		},
+		{
+			"title" : "问题查询",
+			"icon" : "&#xe615;",
+			"href" : "page/wtk/wtk_query.php",
+			"spread" : false,
+			"lev":"wtk-3"
+		}
+	]
+},{
+	"title" : "网址导航链接",
+	"icon" : "&#xe64c;",
+	"href" : "page/links/linksList.html",
+	"spread" : false,
+	"lev":"url_nav"
+},{
+	"title" : "系统基本参数",
+	"icon" : "&#xe631;",
+	"href" : "page/systemParameter/systemParameter.html",
+	"spread" : false,
+	"lev":"noadmin"
+},{
+	"title" : "系统设置",
+	"icon" : "&#xe630;",
+	"href" : "",
+	"spread" : false,
+	"lev":"system",
+	"children" : [
+		{
+			"title" : "新增用户",
+			"icon" : "&#xe612;",
+			"href" : "page/user/addUser.php",
+			"spread" : false,
+			"lev":"system-1"
+		},
+		{
+			"title" : "用户管理",
+			"icon" : "&#xe613;",
+			"href" : "./page/user/userManagement.php",
+			"spread" : false,
+			"lev":"system-2"
+		}
+	]
+}]
