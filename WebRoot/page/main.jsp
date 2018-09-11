@@ -22,7 +22,7 @@
 			height:100%;
 			background: url("../images/ycqbg.jpg") no-repeat;
 			
-			background-size: cover;
+			background-size: 100%;
 		}
 	</style>
 </head>
