@@ -1,8 +1,14 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*,bjtu.gruop7.bean.UserBean" pageEncoding="UTF-8"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
+		//判断session信息
+		HttpSession sn = request.getSession();
+		UserBean bean = (UserBean)sn.getAttribute("UserBean");	
+		if(bean==null){
+			 response.sendRedirect("./login.html");
+		}
 %>
 
 <!DOCTYPE html>
@@ -133,7 +139,7 @@
 			<div class="layui-tab marg0" lay-filter="bodyTab" id="top_tabs_box">
 				<ul class="layui-tab-title top_tab" id="top_tabs">
 					<li class="layui-this" lay-id=""><i
-						class="iconfont icon-computer"></i> <cite>中秋节快乐</cite></li>
+						class="iconfont icon-computer"></i> <cite>中秋祝福</cite></li>
 				</ul>
 				<ul class="layui-nav closeBox">
 					<li class="layui-nav-item"><a href="javascript:;"><i
@@ -170,9 +176,8 @@
 			</p>
 		</div>
 	</div>
-	<!-- <input type=text name="pass" id="pass" value=<?php echo $passs;?>>
-	<input type="text" name="user" id="user" value=<?php echo $bm.'-'.$name;?>>
-	<input type="text" name="lev" id="lev" value=<?php echo $_SESSION['lev'];?>> -->
+
+	<input type="hidden" name="lev" id="lev" value="${ sessionScope.UserBean.lev} ">
 
 
 	<!-- 移动导航 -->
@@ -182,10 +187,18 @@
 	<div class="site-mobile-shade"></div>
 
 
-	<script type="text/javascript" src="./frame/layui/layui.js"></script>
+	<script type="text/javascript" src="./frame/layui225/layui.js"></script>
 	<script type="text/javascript" src="./js/leftNav.js"></script>
 	<script type="text/javascript" src="./js/index.js"></script>
 	<script src="./js/jquery-1.10.2.min.js"></script>
 	<script src="./js/menu_custom.js"></script>
+	<script>
+		var salary_number  =   "${sessionScope.UserBean.salary_number}";
+        var orga_name   =   "${sessionScope.UserBean.orga_name}";
+        var depart_name =   "${sessionScope.UserBean.depart_name}";
+        var name        =   "${sessionScope.UserBean.name}";
+        var lev         =   "${sessionScope.UserBean.lev}";
+    </script>
+	<script	src="./js/storage.js"></script>
 </body>
 </html>
