@@ -3,6 +3,13 @@
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
+			//判断session信息
+	//判断session信息
+	HttpSession sn = request.getSession();
+	UserBean bean = (UserBean)sn.getAttribute("UserBean");	
+	 if(bean==null){
+		 response.sendRedirect(request.getContextPath() +"/login.html"); 
+	} 
 %>
 
 <!DOCTYPE html>

@@ -3,14 +3,13 @@
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
-		//判断session信息
-		HttpSession sn = request.getSession();
-		UserBean bean = (UserBean)sn.getAttribute("UserBean");	
-		if(bean==null){
-			 response.sendRedirect("./login.html");
-		}
+	//判断session信息
+	HttpSession sn = request.getSession();
+	UserBean bean = (UserBean)sn.getAttribute("UserBean");	
+	 if(bean==null){
+		 response.sendRedirect(request.getContextPath() +"/login.html");	 
+	} 
 %>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -136,7 +135,7 @@
 		</div>
 		<!-- 右侧内容 -->
 		<div class="layui-body layui-form">
-			<div class="layui-tab marg0" lay-filter="bodyTab" id="top_tabs_box">
+			<div class="layui-tab marg0 " lay-filter="bodyTab" id="top_tabs_box" >
 				<ul class="layui-tab-title top_tab" id="top_tabs">
 					<li class="layui-this" lay-id=""><i
 						class="iconfont icon-computer"></i> <cite>中秋祝福</cite></li>
@@ -178,6 +177,8 @@
 	</div>
 
 	<input type="hidden" name="lev" id="lev" value="${ sessionScope.UserBean.lev} ">
+	<input type="hidden" name="user" id="user" value="${ sessionScope.UserBean.name} ">
+	<input type="hidden" name="pass" id="pass" value=${sessionScope.UserBean.login_pass}>
 
 
 	<!-- 移动导航 -->
@@ -194,11 +195,12 @@
 	<script src="./js/menu_custom.js"></script>
 	<script>
 		var salary_number  =   "${sessionScope.UserBean.salary_number}";
-        var orga_name   =   "${sessionScope.UserBean.orga_name}";
-        var depart_name =   "${sessionScope.UserBean.depart_name}";
-        var name        =   "${sessionScope.UserBean.name}";
-        var lev         =   "${sessionScope.UserBean.lev}";
+        var orga_name      =   "${sessionScope.UserBean.orga_name}";
+        var depart_name    =   "${sessionScope.UserBean.depart_name}";
+        var name           =   "${sessionScope.UserBean.name}";
+        var lev        	   =   "${sessionScope.UserBean.lev}";
     </script>
 	<script	src="./js/storage.js"></script>
+	
 </body>
 </html>

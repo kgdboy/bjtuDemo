@@ -16,35 +16,31 @@
 			"icon" : "&#xe654;",
 			"href" : "page/wtk/wtk_add.php",
 			"spread" : false,
-			"lev":"wtk-1"
+			"lev":"dc-1"
 		},
 		{
-			"title" : "问题管理",
+			"title" : "订餐管理",
 			"icon" : "&#xe63c;",
 			"href" : "page/wtk/wtk_manager.php",
 			"spread" : false,
-			"lev":"wtk-2"
+			"lev":"dc-2"
 		},
 		{
-			"title" : "问题查询",
+			"title" : "结算管理",
+			"icon" : "&#xe63c;",
+			"href" : "page/wtk/wtk_manager.php",
+			"spread" : false,
+			"lev":"dc-3"
+		}
+		,
+		{
+			"title" : "日志查询",
 			"icon" : "&#xe615;",
 			"href" : "page/wtk/wtk_query.php",
 			"spread" : false,
-			"lev":"wtk-3"
+			"lev":"dc-4"
 		}
 	]
-},{
-	"title" : "网址导航链接",
-	"icon" : "&#xe64c;",
-	"href" : "page/links/linksList.html",
-	"spread" : false,
-	"lev":"url_nav"
-},{
-	"title" : "系统基本参数",
-	"icon" : "&#xe631;",
-	"href" : "page/systemParameter/systemParameter.html",
-	"spread" : false,
-	"lev":"noadmin"
 },{
 	"title" : "系统设置",
 	"icon" : "&#xe630;",
@@ -55,14 +51,14 @@
 		{
 			"title" : "新增用户",
 			"icon" : "&#xe612;",
-			"href" : "page/user/addUser.php",
+			"href" : "page/user/addUser.jsp",
 			"spread" : false,
 			"lev":"system-1"
 		},
 		{
 			"title" : "用户管理",
 			"icon" : "&#xe613;",
-			"href" : "./page/user/userManagement.php",
+			"href" : "./page/user/userManagement.jsp",
 			"spread" : false,
 			"lev":"system-2"
 		}

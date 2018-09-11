@@ -1,3 +1,15 @@
+<%@ page language="java" import="java.util.*,bjtu.gruop7.bean.UserBean" pageEncoding="UTF-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+			//判断session信息
+		HttpSession sn = request.getSession();
+		UserBean bean = (UserBean)sn.getAttribute("UserBean");	
+		if(bean==null){
+			 response.sendRedirect("./login.html");
+		}
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +21,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="../../layui225/css/layui.css" media="all">
+	<link rel="stylesheet" href="../../frame/layui225/css/layui.css" media="all">
 	<style>
 		.zdy{
 			height: 50px;
@@ -59,7 +71,7 @@
 				<input type="text" name="realName"   class="layui-input" id="realName" />
 			</div>
 		</div>
-		<!--一行三 所在部门-->
+		<!--一行三 所在部门
 		<div class="layui-inline" >
 			<label class="layui-form-label">所在部门</label>
 			<div class="layui-input-inline">
@@ -69,7 +81,7 @@
 					<?php }?>
 				</select>
 			</div>
-		</div>
+		</div>-->
 		<!--一行四 电话号码-->
 		<div class="layui-inline" >
 			<label class="layui-form-label">电话号码</label>
@@ -96,7 +108,7 @@
 <div id="page">
 	<table id="test1" lay-filter="test" lay-data="idTest"></table>
 </div>
-<script type="text/javascript" src="../../layui225/layui.js"></script>
+<script type="text/javascript" src="../../frame/layui225/layui.js"></script>
 <script>
     layui.use(['layer','jquery','table','form'],function() {
         var layer = layui.layer,

@@ -8,6 +8,7 @@ $(window).click(function () {
     if(!in_array(1 ,$arr)){
         $(".system-1").remove();//新增用户
         $(".system-2").remove();//管理用户
+        
     }
     //每设置一个模块都要把!in_array(1 ,$arr)加上以此来验证全局管理员
     if(!in_array(4 ,$arr) && !in_array(1 ,$arr) ){

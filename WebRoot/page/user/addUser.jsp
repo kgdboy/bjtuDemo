@@ -1,3 +1,17 @@
+<%@ page language="java" import="java.util.*,bjtu.gruop7.bean.UserBean" pageEncoding="UTF-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+	//判断session信息
+	HttpSession sn = request.getSession();
+	UserBean bean = (UserBean)sn.getAttribute("UserBean");	
+	 if(bean==null){
+		 response.sendRedirect(request.getContextPath() +"/login.html");
+		 
+	} 
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +23,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="../../layui225/css/layui.css" media="all">
+	<link rel="stylesheet" href="../../frame/layui225/css/layui.css" media="all">
 	<style type="text/css">
 		.layui-form-item .layui-inline{ width:33.333%; float:left; margin-right:0; }
 		@media(max-width:1240px){
@@ -85,9 +99,9 @@
 					<div class="layui-unselect layui-form-checkbox layui-form-checked" lay-skin=""><span>普通用户</span><i class="layui-icon"></i></div>
 					<input type="hidden" name="user[guest]" title="" value="0">
 					<input type="checkbox" name="user[wtk]" title="问题库管理" value="4">
-					<input type="checkbox" name="user[gbpj]" title="干部评价管理" disabled="">
-					<input type="checkbox" name="user[dcgl]" title="订餐管理" disabled="">
-					<input type="checkbox" name="user[dbgl]" title="督办管理" disabled="">
+					<input type="checkbox" name="user[gbpj]" title="干部评价管理" value="3">
+					<input type="checkbox" name="user[dcgl]" title="订餐管理" value="2" >
+					<input type="checkbox" name="user[dbgl]" title="督办管理" value="5">
 					<input type="checkbox" name="user[admin]" title="系统管理员" value="1">
 			    </div>
 		    </div>
@@ -105,14 +119,14 @@
 		    </div>
 		</div>
 	</form>
-	<script type="text/javascript" src="../../layui225/layui.js"></script>
+	<script type="text/javascript" src="../../frame/layui225/layui.js"></script>
 	<script>
 		layui.use(['layer','element','form'],function () {
 			var element  = layui.element,
 				form = layui.form,
 				layer = layui.layer,
 				$ = layui.$;
-
+				
 			form.on('submit(addUser)',function (data) {
                 //开始长度验证
                 if(data.field.loginName.length<2){
