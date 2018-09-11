@@ -16,9 +16,7 @@ layui.config({
 	//登录按钮事件
 	form.on("submit(login)",function(data){
 		// 发起AJAX请求
-		$.post('loginServlet',data.field,function(data){
-		// 目前是假数据
-		data = '{"code":0,"message":"无","bm":"管控中心","name":"吴戈"}';
+		$.post('SignInServlet',data.field,function(data){
         // 判断第一个字符是否非法
 		var firstCode = data.charCodeAt(0);
 		if (firstCode < 0x20 || firstCode > 0x7f) {

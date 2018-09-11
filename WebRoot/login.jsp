@@ -24,17 +24,17 @@
 <body class="no_select">
 	<video class="video-player" preload="auto" autoplay="autoplay"
 		loop="loop" data-height="1080" data-width="1920" height="1080"
-		width=100%> <source src="./1.mp4" type="video/mp4"></video>
+		width=100%> <source src="./video/1.mp4" type="video/mp4"></video>
 	<div class="video_mask"></div>
 	<div class="login">
 		<h1>站段统一订餐系统</h1>
 		<form class="layui-form">
 			<div class="layui-form-item">
-				<input class="layui-input" name="name" id="user" placeholder="用户名"
+				<input class="layui-input" name="username" id="user" placeholder="用户名"
 					lay-verify="required" type="text" autocomplete="off">
 			</div>
 			<div class="layui-form-item">
-				<input class="layui-input" name="pass" id="pass" placeholder="密码"
+				<input class="layui-input" name="password" id="pass" placeholder="密码"
 					lay-verify="required" type="password" autocomplete="off">
 			</div>
 			<!--验证码-->
@@ -44,7 +44,7 @@
 				<div class="code">
 					<div class="yzm"
 						style="width:116px;font-size: 28px; height:30px;line-height:30px;text-align: center">
-						<?php echo $yzm;?>
+					
 					</div>
 				</div>
 				<!--验证码-->

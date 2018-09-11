@@ -23,11 +23,11 @@
 <link rel="stylesheet" href="./css/main.css" media="all" />
 </head>
 <body class="main_body">
-	<div class="layui-layout layui-layout-admin">
+	<div class="layui-layout layui-layout-admin showMenu">
 		<!-- 顶部 -->
 		<div class="layui-header header">
 			<div class="layui-main">
-				<a href="#" class="logo">单位名称session</a>
+				<a href="#" class="logo">${ sessionScope.UserBean.orga_name} </a>
 				<!-- 显示/隐藏菜单 -->
 				<a href="javascript:;" class="iconfont hideMenu icon-menu1"></a>
 				<!-- 搜索 -->
@@ -85,24 +85,24 @@
 						href="javascript:;"><i class="iconfont icon-gonggao"></i><cite>系统公告</cite></a>
 					</li>
 					<li class="layui-nav-item" mobile><a href="javascript:;"
-						class="mobileAddTab" data-url="page/user/changePwd.php"><i
+						class="mobileAddTab" data-url="page/user/changePwd.jsp"><i
 							class="iconfont icon-shezhi1" data-icon="icon-shezhi1"></i><cite>设置</cite></a>
 					</li>
-					<li class="layui-nav-item" mobile><a href="./exit.php"
+					<li class="layui-nav-item" mobile><a href="./exit.jsp"
 						class="signOut"><i class="iconfont icon-loginout"></i> 退出</a></li>
 					<li class="layui-nav-item lockcms" pc><a href="javascript:;"><i
 							class="iconfont icon-lock1"></i><cite>锁屏</cite></a></li>
 					<li class="layui-nav-item" pc><a href="javascript:;"> <img
 							src="images/face.jpg" class="layui-circle" width="35" height="35">
-							<cite>姓名session</cite>
+							<cite>${ sessionScope.UserBean.name}</cite>
 					</a>
 						<dl class="layui-nav-child">
 							<dd>
-								<a href="javascript:;" data-url="page/user/userInfo.php"><i
+								<a href="javascript:;" data-url="page/user/userInfo.jsp"><i
 									class="iconfont icon-zhanghu" data-icon="icon-zhanghu"></i><cite>个人资料</cite></a>
 							</dd>
 							<dd>
-								<a href="javascript:;" data-url="page/user/changePwd.php"><i
+								<a href="javascript:;" data-url="page/user/changePwd.jsp"><i
 									class="iconfont icon-shezhi1" data-icon="icon-shezhi1"></i><cite>修改密码</cite></a>
 							</dd>
 							<dd>
@@ -110,7 +110,7 @@
 									class="iconfont icon-huanfu"></i><cite>更换皮肤</cite></a>
 							</dd>
 							<dd>
-								<a href="./exit.php" class="signOut"><i
+								<a href="./exit.jsp" class="signOut"><i
 									class="iconfont icon-loginout"></i><cite>退出</cite></a>
 							</dd>
 						</dl></li>
@@ -122,7 +122,7 @@
 			<div class="user-photo">
 				<a class="img" title="我的头像"><img src="images/face.jpg"></a>
 				<p>
-					<?php echo $_SESSION['name'];?>
+					${ sessionScope.UserBean.name}
 					您好,欢迎登录
 				</p>
 			</div>
@@ -133,7 +133,7 @@
 			<div class="layui-tab marg0" lay-filter="bodyTab" id="top_tabs_box">
 				<ul class="layui-tab-title top_tab" id="top_tabs">
 					<li class="layui-this" lay-id=""><i
-						class="iconfont icon-computer"></i> <cite>后台首页</cite></li>
+						class="iconfont icon-computer"></i> <cite>中秋节快乐</cite></li>
 				</ul>
 				<ul class="layui-nav closeBox">
 					<li class="layui-nav-item"><a href="javascript:;"><i
@@ -155,7 +155,7 @@
 				</ul>
 				<div class="layui-tab-content clildFrame">
 					<div class="layui-tab-item layui-show">
-						<iframe src="page/main.php"></iframe>
+						<iframe src="page/main.jsp"></iframe>
 					</div>
 				</div>
 			</div>
@@ -163,9 +163,10 @@
 		<!-- 底部 -->
 		<div class="layui-footer footer">
 			<p>
-				<?php echo $foot_bq_info;?>
+				copyright @2018  中国铁路沈阳局集团有限公司信息技术提高班-第七组 &nbsp;&nbsp;
 				<a onclick="donation()"
-					class="layui-btn layui-btn-danger layui-btn-small">捐赠作者</a>
+					class="layui-btn layui-btn-danger layui-btn-small">捐赠我们</a>
+					
 			</p>
 		</div>
 	</div>

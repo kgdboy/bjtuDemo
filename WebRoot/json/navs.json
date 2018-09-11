@@ -1,18 +1,18 @@
 [{
-	"title" : "后台首页",
+	"title" : "首页",
 	"icon" : "icon-computer",
-	"href" : "page/main.html",
+	"href" : "page/main.jsp",
 	"spread" : false,
 	"lev":"main"
 },{
-	"title" : "问题库管理",
+	"title" : "订餐管理",
 	"icon" : "&#xe630;",
 	"href" : "",
 	"spread" : false,
 	"lev":"wtk",
 	"children" : [
 		{
-			"title" : "问题录入",
+			"title" : "在线订餐",
 			"icon" : "&#xe654;",
 			"href" : "page/wtk/wtk_add.php",
 			"spread" : false,
