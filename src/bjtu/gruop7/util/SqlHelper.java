@@ -83,7 +83,6 @@ public final class SqlHelper {
     @SuppressWarnings({ "rawtypes", "unchecked" })
     public ArrayList<String[]> executeQuery(String sql, String[] parameters) {
         ArrayList results = new ArrayList();
-         
         try {
             conn = jdbcUtils.getConnection();
             ps = conn.prepareStatement(sql);
@@ -93,12 +92,10 @@ public final class SqlHelper {
                     ps.setString(i+1, parameters[i]);
                 }
             }
-             
             rs = ps.executeQuery();
              
             ResultSetMetaData rsmd = rs.getMetaData();
             int column = rsmd.getColumnCount();
-             
             while (rs.next()) {
                 String[] str = new String[column];
                  

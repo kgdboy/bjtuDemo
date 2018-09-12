@@ -9,12 +9,12 @@
 	"icon" : "&#xe630;",
 	"href" : "",
 	"spread" : false,
-	"lev":"wtk",
+	"lev":"dc",
 	"children" : [
 		{
 			"title" : "在线订餐",
 			"icon" : "&#xe654;",
-			"href" : "page/wtk/wtk_add.php",
+			"href" : "page/food/dc_add.jsp",
 			"spread" : false,
 			"lev":"dc-1"
 		},
