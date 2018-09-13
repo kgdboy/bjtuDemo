@@ -144,7 +144,7 @@
 					//发送AJAX请求
 					$.post("${pageContext.request.contextPath}/reservationMeal", {
 						"reservationCategory" : "早餐",
-						"salary_number":${sessionScope.UserBean.salary_number}
+						"salary_number":'${sessionScope.UserBean.salary_number}'
 					}, function(result) {
 						var code = JSON.parse(result);
 						if (code[0] == 1) {
@@ -175,7 +175,7 @@
 			//订午餐
 			$("#afternoon").click(function() {
 				// 判断当前时间<9点为今日，大于12点为明日
-				var sj = 666;
+				sj = new Date().getHours();
 				if (sj < 9) {
 					rq = '今日';
 				} else {
@@ -189,8 +189,9 @@
 					btn : [ '是, 我非常确定', '不, 让我再想想' ] //按钮
 				}, function() {
 					//发送AJAX请求
-					$.post("d5c_ajax.php", {
-						lx : '午餐'
+					$.post("${pageContext.request.contextPath}/reservationMeal", {
+						"reservationCategory" : "午餐",
+						"salary_number":'${sessionScope.UserBean.salary_number}'
 					}, function(result) {
 						// console.log(result);return false;
 						var code = JSON.parse(result);
@@ -228,8 +229,9 @@
 					btn : [ '是, 我非常确定', '不, 让我再想想' ] //按钮
 				}, function() {
 					//发送AJAX请求
-					$.post("dwc_ajax.php", {
-						lx : '晚餐'
+					$.post("${pageContext.request.contextPath}/reservationMeal", {
+						"reservationCategory" : "晚餐",
+						"salary_number":'${sessionScope.UserBean.salary_number}'
 					}, function(result) {
 						var code = JSON.parse(result);
 						if (code[0] == 1) {
@@ -239,7 +241,7 @@
 								skin : 'layui-layer-molv'
 							});
 						} else if (code[0] == 0) {
-							layer.alert('好的,预定成功啦,您加班辛苦了!', {
+							layer.alert('好的,预定成功啦,您值班辛苦了!', {
 								title : '本次消费后,您的余额为：' + code[1] + '元',
 								icon : 1,
 								skin : 'layui-layer-molv'
@@ -259,7 +261,7 @@
 			//午餐退订
 			$("#wctd").click(function() {
 				//退午餐时间显示
-				var sj = 666;
+				sj = new Date().getHours();
 				if (sj < 9) {
 					rq = '今日';
 				} else {
@@ -273,8 +275,9 @@
 					btn : [ '说啥也不吃了', '让我再想想吧' ] //按钮
 				}, function() {
 					//发送AJAX请求
-					$.post("t5c_ajax.php", {
-						lx : '午餐'
+					$.post("${pageContext.request.contextPath}/UnsubscribeLunchServlet", {
+						"salary_number":'${sessionScope.UserBean.salary_number}',
+						"lx" : "午餐"
 					}, function(result) {
 						var code = JSON.parse(result);
 						if (code[0] == 1) {
