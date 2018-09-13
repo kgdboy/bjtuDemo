@@ -18,19 +18,18 @@ public class UserDao {
 	 * @return
 	 */
 	public ArrayList<Object> signIn(String username, String password) {
-		// TODO 自动生成的方法存根
+		// TODO 自动生成的方法存根mbv
 		ArrayList<Object> arr = new ArrayList<>();
 		UserBean userBean = new UserBean();
 		bjtu.gruop7.util.SqlHelper sqlHelper = new bjtu.gruop7.util.SqlHelper();
-
 		String[] str = { username, password };
 		ArrayList<String[]> arrayList = sqlHelper.executeQuery(
 				"select info_user.id,info_user.login_name,info_user.login_pass,info_organization.orga_name,"
 				+ "info_department.depart_name,info_user.name,info_user.nation,info_user.duty,info_user.salary_number,"
 				+ "info_user.tel,info_user.identity_num,info_user.lev,info_user.virtual_account from "
 				+ "info_user join info_department on info_user.depart_id=info_department.depart_id join"
-				+ " info_organization on info_organization.orga_id=info_department.orga_id where login_name = ? "
-				+ "and login_pass = ?",
+				+ " info_organization on info_organization.orga_id=info_department.orga_id where binary login_name = ? "
+				+ "and binary login_pass = ?",
 				str);
 
 		if (arrayList.size() > 0) {
