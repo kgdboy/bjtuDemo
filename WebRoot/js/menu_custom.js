@@ -11,8 +11,8 @@ $(window).click(function () {
         
     }
     //每设置一个模块都要把!in_array(1 ,$arr)加上以此来验证全局管理员
-    if(!in_array(4 ,$arr) && !in_array(1 ,$arr) ){
-        $(".wtk-3").remove();
+    if(!in_array(2 ,$arr) && !in_array(1 ,$arr) ){
+        $(".dc-2").remove();
     }
 
     function in_array(stringToSearch, arrayToSearch) {

@@ -21,7 +21,7 @@
 		{
 			"title" : "订餐管理",
 			"icon" : "&#xe63c;",
-			"href" : "page/wtk/wtk_manager.php",
+			"href" : "page/food/admin_dc_manager.jsp",
 			"spread" : false,
 			"lev":"dc-2"
 		},

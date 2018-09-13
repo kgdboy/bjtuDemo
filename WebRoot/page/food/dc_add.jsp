@@ -7,6 +7,8 @@
 	//判断session信息
 	HttpSession sn = request.getSession();
 	UserBean bean = (UserBean) sn.getAttribute("UserBean");
+	String lev = bean.getLev();
+	/* System.out.println(lev); */
 	if (bean == null) {
 		response.sendRedirect(request.getContextPath() + "/login.html");
 	}
@@ -85,7 +87,7 @@
 	</div>
 	<hr>
 	<div class="small_bq">
-		<img src="./img/jzgdd.png" alt=""> <span class="s"> <b>智慧生活</b><b>网络订餐</b><b>软件开发</b><b>
+		<img src="./img/icon.png" alt=""> <span class="s"> <b>智慧生活</b><b>网络订餐</b><b>软件开发</b><b>
 				© 信息技术提高班——第七组</b></span>
 	</div>
 
@@ -107,7 +109,7 @@
 	此处应发起ajax请求，发送一个工资号码，返回用户当前余额
  */
  			// 发起AJAX请求
-		$.post("${pageContext.request.contextPath}/requestMoney",{"salary_number":${sessionScope.UserBean.salary_number}},function(data){
+		$.post("${pageContext.request.contextPath}/RequestMoneyServlet",{"salary_number":'${sessionScope.UserBean.salary_number}'},function(data){
 	        // 判断第一个字符是否非法
 			var firstCode = data.charCodeAt(0);
 			if (firstCode < 0x20 || firstCode > 0x7f) {
@@ -133,15 +135,16 @@
 	
 			//询问用户是否订早餐
 			$("#morning").click(function() {
-				layer.confirm('您确定要预定明日的早餐吗?（不可退餐）', {
+				layer.confirm('您确定要预定<span style="color:red;">明日</span>的早餐吗?（不可退餐）', {
 					title : '预订早餐,我们将扣除您2元费用',
 					icon : 3,
 					skin : 'layui-layer-molv',
 					btn : [ '是, 我非常确定', '不, 让我再想想' ] //按钮
 				}, function() {
 					//发送AJAX请求
-					$.post("dzc_ajax.php", {
-						lx : '早餐'
+					$.post("${pageContext.request.contextPath}/reservationMeal", {
+						"reservationCategory" : "早餐",
+						"salary_number":${sessionScope.UserBean.salary_number}
 					}, function(result) {
 						var code = JSON.parse(result);
 						if (code[0] == 1) {
