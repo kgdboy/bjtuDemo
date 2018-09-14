@@ -1,19 +1,22 @@
 package bjtu.gruop7.bean;
 
 public class UserBean {
-	private int		id                    ;
-	private String  login_name			  ;
-	private String  login_pass			  ;
-	private String	orga_name             ;
-	private String	depart_name           ;
-	private String	name                  ;
-	private String	nation	              ;
-	private String  duty				  ;
-	private String	salary_number         ;
-	private String  tel					  ;
-	private String	identity_num          ;
-	private String	lev                   ;
-	private int		virtual_account       ;
+	private int id;
+	private String login_name;
+	private String login_pass;
+	
+	private String orga_id;
+	private String depart_id;
+	private String orga_name;
+	private String depart_name;
+	private String name;
+	private String nation;
+	private String duty;
+	private String salary_number;
+	private String tel;
+	private String identity_num;
+	private String lev;
+	private int virtual_account;
 
 	public UserBean() {
 		// TODO 自动生成的构造函数存根
@@ -27,7 +30,6 @@ public class UserBean {
 		this.id = id;
 	}
 
-	
 	public String getLogin_name() {
 		return login_name;
 	}
@@ -42,6 +44,22 @@ public class UserBean {
 
 	public void setLogin_pass(String login_pass) {
 		this.login_pass = login_pass;
+	}
+
+	public String getOrga_id() {
+		return orga_id;
+	}
+
+	public void setOrga_id(String orga_id) {
+		this.orga_id = orga_id;
+	}
+
+	public String getDepart_id() {
+		return depart_id;
+	}
+
+	public void setDepart_id(String depart_id) {
+		this.depart_id = depart_id;
 	}
 
 	public String getOrga_name() {
@@ -75,7 +93,7 @@ public class UserBean {
 	public void setNation(String nation) {
 		this.nation = nation;
 	}
-	
+
 	public String getDuty() {
 		return duty;
 	}
@@ -91,7 +109,7 @@ public class UserBean {
 	public void setSalary_number(String salary_number) {
 		this.salary_number = salary_number;
 	}
-	
+
 	public String getTel() {
 		return tel;
 	}
@@ -123,13 +141,4 @@ public class UserBean {
 	public void setVirtual_account(int virtual_account) {
 		this.virtual_account = virtual_account;
 	}
-
-	@Override
-	public String toString() {
-		return "UserBean [id=" + id + ", login_name=" + login_name + ", login_pass=" + login_pass + ", orga_name="
-				+ orga_name + ", depart_name=" + depart_name + ", name=" + name + ", nation=" + nation + ", duty="
-				+ duty + ", salary_number=" + salary_number + ", tel=" + tel + ", identity_num=" + identity_num
-				+ ", lev=" + lev + ", virtual_account=" + virtual_account + "]";
-	}
-	
 }

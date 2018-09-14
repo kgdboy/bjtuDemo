@@ -61,11 +61,9 @@ tr th, td {
 		//发送ajax请求,发送请求参数是单位名称，返回该单位所有人员虚拟帐户金额小于0的信息，包括：部门、姓名、工资号、金额
 		// SELECT Bm,Name,vmoney,gz_number from user where vmoney<0 ORDER BY Bm";
 		$.post("${pageContext.request.contextPath}/TestServlet", {
-			"orga_name" : '${sessionScope.UserBean.orga_name}'
+			"orga_id" : '${sessionScope.UserBean.orga_id}'
 		}, function(result) {
-		console.log(result);
 			var code = JSON.parse(result);
-				console.log(code);
 			var tablehtml = "<tr><th>序号</th><th>部门</th><th>姓名</th><th>工资号</th><th>金额(元)</th></tr>";
 			for (var i = 0,j=0; i < code.data.length; i++) {
 				tablehtml += "<tr style='text-align: center'><td>" + (++j) + "</td>" +

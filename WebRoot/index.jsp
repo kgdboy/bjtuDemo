@@ -199,6 +199,8 @@
         var depart_name    =   "${sessionScope.UserBean.depart_name}";
         var name           =   "${sessionScope.UserBean.name}";
         var lev        	   =   "${sessionScope.UserBean.lev}";
+        var orga_id        =   "${sessionScope.UserBean.orga_id}";
+        var depart_id      =   "${sessionScope.UserBean.depart_id}";
     </script>
 	<script	src="./js/storage.js"></script>
 	

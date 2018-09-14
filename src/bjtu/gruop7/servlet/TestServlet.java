@@ -52,8 +52,8 @@ public class TestServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String orga_name = req.getParameter("orga_name");
-		
+		String orga_id = req.getParameter("orga_id");
+
 		resp.setContentType("text/html;charset=utf-8");
 		//post中文乱码
 		req.setCharacterEncoding("UTF-8");

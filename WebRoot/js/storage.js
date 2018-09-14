@@ -6,7 +6,8 @@ layui.use(['layer','jquery'],function(){
 		layui.sessionData('bjtu', {key: 'depart_name',value: depart_name});	
 		layui.sessionData('bjtu', {key: 'name',value: name});	
 		layui.sessionData('bjtu', {key: 'lev',value: lev});
-		
+		layui.sessionData('bjtu', {key: 'orga_id',value: orga_id});
+		layui.sessionData('bjtu', {key: 'depart_id',value: depart_id});
 //		console.log(layui.sessionData('bjtu').salary_number); 
 		
     })
