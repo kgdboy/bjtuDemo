@@ -9,6 +9,10 @@
     <servlet-name>RequestMoneyServlet</servlet-name>
     <servlet-class>bjtu.gruop7.servlet.RequestMoneyServlet</servlet-class>
   </servlet>
+   <servlet>
+    <servlet-name>ReservationMealServlet</servlet-name>
+    <servlet-class>bjtu.gruop7.servlet.ReservationMealServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
     <servlet-name>SignInServlet</servlet-name>
     <url-pattern>/SignInServlet</url-pattern>
@@ -17,6 +21,12 @@
     <servlet-name>RequestMoneyServlet</servlet-name>
     <url-pattern>/RequestMoneyServlet</url-pattern>
   </servlet-mapping>
+  <!-- 0914新增  -->
+  <servlet-mapping>
+    <servlet-name>ReservationMealServlet</servlet-name>
+    <url-pattern>/ReservationMealServlet</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>login.html</welcome-file>
   </welcome-file-list>

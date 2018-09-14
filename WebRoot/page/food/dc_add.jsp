@@ -142,20 +142,21 @@
 					btn : [ '是, 我非常确定', '不, 让我再想想' ] //按钮
 				}, function() {
 					//发送AJAX请求
-					$.post("${pageContext.request.contextPath}/reservationMeal", {
-						"reservationCategory" : "早餐",
+					$.post("${pageContext.request.contextPath}/ReservationMealServlet", {
+						"reservation_category":"早餐",
+						"request_status":"订餐",
 						"salary_number":'${sessionScope.UserBean.salary_number}'
-					}, function(result) {
-						var code = JSON.parse(result);
-						if (code[0] == 1) {
-							layer.alert(code[1], {
+					}, function(data) {
+						var data = JSON.parse(data);
+						if (data.code == 1) {
+							layer.alert(data.message, {
 								title : '很遗憾的提示您：',
 								icon : 2,
 								skin : 'layui-layer-molv'
 							});
-						} else if (code[0] == 0) {
+						} else if (data.code == 0) {
 							layer.alert('好的,预定成功啦,明天早上不见不散!', {
-								title : '本次消费后,您的余额为：' + code[1] + '元',
+								title : '本次消费后,您的余额为：' + data.virtual_account + '元',
 								icon : 1,
 								skin : 'layui-layer-molv'
 							});
@@ -189,21 +190,21 @@
 					btn : [ '是, 我非常确定', '不, 让我再想想' ] //按钮
 				}, function() {
 					//发送AJAX请求
-					$.post("${pageContext.request.contextPath}/reservationMeal", {
-						"reservationCategory" : "午餐",
+					$.post("${pageContext.request.contextPath}/ReservationMealServlet", {
+						"reservation_category":"午餐",
+						"request_status":"订餐",
 						"salary_number":'${sessionScope.UserBean.salary_number}'
-					}, function(result) {
-						// console.log(result);return false;
-						var code = JSON.parse(result);
-						if (code[0] == 1) {
-							layer.alert(code[1], {
+					}, function(data) {
+						var data = JSON.parse(data);
+						if (data.code == 1) {
+							layer.alert(data.message, {
 								title : '很遗憾的提示您：',
 								icon : 2,
 								skin : 'layui-layer-molv'
 							});
-						} else if (code[0] == 0) {
+						} else if (data.code == 0) {
 							layer.alert('预定午餐成功 三菜一汤老地方等你', {
-								title : '本次消费后,您的余额为：' + code[1] + '元',
+								title : '本次消费后,您的余额为：' + data.virtual_account + '元',
 								icon : 1,
 								skin : 'layui-layer-molv'
 							});
@@ -229,20 +230,21 @@
 					btn : [ '是, 我非常确定', '不, 让我再想想' ] //按钮
 				}, function() {
 					//发送AJAX请求
-					$.post("${pageContext.request.contextPath}/reservationMeal", {
-						"reservationCategory" : "晚餐",
+					$.post("${pageContext.request.contextPath}/ReservationMealServlet", {
+						"reservation_category":"晚餐",
+						"request_status":"订餐",
 						"salary_number":'${sessionScope.UserBean.salary_number}'
-					}, function(result) {
-						var code = JSON.parse(result);
-						if (code[0] == 1) {
-							layer.alert(code[1], {
+					}, function(data) {
+						var data = JSON.parse(data);
+						if (data.code == 1) {
+							layer.alert(data.message, {
 								title : '很遗憾的提示您：',
 								icon : 2,
 								skin : 'layui-layer-molv'
 							});
-						} else if (code[0] == 0) {
+						} else if (data.code == 0) {
 							layer.alert('好的,预定成功啦,您值班辛苦了!', {
-								title : '本次消费后,您的余额为：' + code[1] + '元',
+								title : '本次消费后,您的余额为：' + data.virtual_account + '元',
 								icon : 1,
 								skin : 'layui-layer-molv'
 							});
@@ -275,20 +277,21 @@
 					btn : [ '说啥也不吃了', '让我再想想吧' ] //按钮
 				}, function() {
 					//发送AJAX请求
-					$.post("${pageContext.request.contextPath}/UnsubscribeLunchServlet", {
-						"salary_number":'${sessionScope.UserBean.salary_number}',
-						"lx" : "午餐"
-					}, function(result) {
-						var code = JSON.parse(result);
-						if (code[0] == 1) {
-							layer.alert(code[1], {
+					$.post("${pageContext.request.contextPath}/ReservationMealServlet", {
+						"reservation_category":"午餐",
+						"request_status":"退餐",
+						"salary_number":'${sessionScope.UserBean.salary_number}'
+					}, function(data) {
+						var data = JSON.parse(data);
+						if (data.code == 1) {
+							layer.alert(data.message, {
 								title : '很遗憾的提示您：',
 								icon : 2,
 								skin : 'layui-layer-molv'
 							});
-						} else if (code[0] == 0) {
+						} else if (data.code == 0) {
 							layer.alert('好的,午餐退订成功啦!', {
-								title : '本次退订后,您的余额为：' + code[1] + '元',
+								title : '本次退订后,您的余额为：' + data.virtual_account + '元',
 								icon : 1,
 								skin : 'layui-layer-molv'
 							});
