@@ -1,0 +1,74 @@
+<html>
+<head>
+<body>
+
+</head>
+<form action="food_viewlog.php" method="post">
+	<table width=90% height=50px cellspacing="0" cellpadding="2" border="1" align="center">
+		<tr>
+			<td align="center" bgcolor="#9acd32">
+				按日期查看：<input style="width:120px;text-align:center" type="text" name='kssj' onClick="WdatePicker()"/>
+				&nbsp至&nbsp  <input style="width:120px;text-align:center" type="text" name='jssj' onClick="WdatePicker()"/>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp按用户名查看：<input type="text" name="uname"/>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp按操作类型查看：
+				<select name="oper_type" id="oper_type" style="width: 100px;height: 30px;">
+					<option value=""> 请选择</option>
+					<option value="消费">消费</option>
+					<option value="退费">退费</option>
+					<option value="充值">充值</option>
+				</select>
+				&nbsp&nbsp&nbsp&nbsp<input type="submit" value="查询" class="btn btn-primary" name="ok" style="width: 100px;height: 30px;" />
+			</td>
+		</tr>
+	</table>
+
+	<table width=90% height=50px cellspacing="0" cellpadding="2" border="1" align="center">
+
+		<tr style="height:50px;">
+			<td style="text-align:center" width="50px">
+				序号
+			</td>
+			<td  style="text-align:center" width="100px">
+				用户
+			</td>
+			<td style="text-align:center" width="200px">
+				时间
+			</td>
+			<td style="text-align:center" width="100px">
+				操作类型
+			</td>
+			<td style="text-align:center" width="100px">
+				金额
+			</td>
+			<td style="text-align:center">
+				具体行为
+			</td>
+		</tr>
+		<?php foreach($rzt as $k=>$v) { ?>
+		<tr style="height:50px;">
+			<td style="text-align:center">
+				<?php echo $v['id'];?>
+			</td>
+			<td style="text-align:center">
+				<?php echo($v['name']);?>
+			</td>
+			<td style="text-align:center">
+				<?php echo(date('Y-m-d H:i:s',$v['date']));?>
+			</td>
+			<td align="center">
+				<?php echo($v['lb']);?>
+			</td>
+			<td align="center">
+				<?php echo($v['je']);?>
+			</td>
+			<td align="center">
+				<?php echo($v['log']);?>
+			</td>
+		</tr>
+		<?php } ?>
+		<tr><td colspan="6" align="center"><?php echo  $page->fpage(array(8,3,4,5,6,7,0,1,2));?></td></tr>
+	</table>
+</form>
+</body>
+</head>
+</html>

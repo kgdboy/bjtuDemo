@@ -27,7 +27,7 @@
 		},
 		{
 			"title" : "结算管理",
-			"icon" : "&#xe63c;",
+			"icon" : "&#xe62a;",
 			"href" : "page/food/js_manager.jsp",
 			"spread" : false,
 			"lev":"dc-3"
