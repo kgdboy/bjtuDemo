@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>jq控制页面</title>
+  <link rel="stylesheet" href="./layui/css/layui.css" media="all">
+
+</head>
+<style>
+  body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code,
+  form, fieldset, legend, input, button, textarea, p, blockquote, th {
+    margin: 0;
+    padding: 0;
+  }
+  .clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  .clearfix {
+    *zoom: 1;
+  }
+  body {
+    background: url("./img/yzgs_bg.gif") repeat 0;
+  }
+  #wrap {
+    width: 950px;
+    margin: 20px auto;
+    margin-bottom: 0;
+  }
+  #wrap #content {
+    border: none;
+    width: 850px;
+    margin: 10px 0;
+  }
+  #content img {
+    cursor: pointer;
+  }
+
+  .h {
+    width: 80px;
+    height: 33px;
+  }
+
+  option, span {
+    margin-left: 5px;
+    font: 19px/19px '微软雅黑';
+  }
+  #show_block {
+    margin-top: 50px;
+    font: 19px/30px '微软雅黑';
+    text-align: left;
+    letter-spacing: 5px;
+  }
+
+  #show_block div {
+    padding: 20px 0;
+    text-align: left;
+  }
+
+  #je {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    font-size: 19px;
+  }
+  #title_gif img{
+    height:110px;
+    width:1200px;
+  }
+  #dc_date{
+    font-size: 19px;
+    text-align: center;
+    width: 200px;
+    color:#1E9FFF;
+  }
+  .btn-group{
+    width: 850px;
+    text-align: center;
+
+  }
+</style>
+
+<body>
+  <div id="wrap" class="clearfix">
+    <button id="cx" class="layui-btn btn-success">查询</button>
+    <table border="1px solid #ccc" class="layui-table " lay-even lay-size="lg" id="table1">
+    </table>
+  </div>
+</body>
+<script src="./layui/layui.js"></script>
+<script>
+    layui.use([ 'layer', 'jquery', 'laydate' ], function() {
+        var layer = layui.layer,
+            laydate = layui.laydate,
+            $ = layui.$;
+        //ajax请求数据并展示
+        $("#cx").click(function() {
+            //发送ajax请求
+            $.post("../../TestServlet", {
+                "data":"wg",
+            }, function(result) {
+                var code = JSON.parse(result);
+                var tablehtml="<tr style='text-align: center'><td>ID</td><td>姓名</td><td>部门</td><td>等级</td></tr>";
+                for (var i=0;i<code.data.length;i++){
+                    tablehtml+=("<tr style='text-align: center'><td>"+code.data[i].id+"</td>" +
+                        "<td>"+code.data[i].name+"</td>" +
+                        "<td>"+code.data[i].depart_name+"</td>" +
+                        "<td>"+code.data[i].lev+"</td></tr>");
+                }
+                $("#table1").html(tablehtml);
+            });
+        })
+
+    })
+</script>
+</html>

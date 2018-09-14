@@ -123,4 +123,13 @@ public class UserBean {
 	public void setVirtual_account(int virtual_account) {
 		this.virtual_account = virtual_account;
 	}
+
+	@Override
+	public String toString() {
+		return "UserBean [id=" + id + ", login_name=" + login_name + ", login_pass=" + login_pass + ", orga_name="
+				+ orga_name + ", depart_name=" + depart_name + ", name=" + name + ", nation=" + nation + ", duty="
+				+ duty + ", salary_number=" + salary_number + ", tel=" + tel + ", identity_num=" + identity_num
+				+ ", lev=" + lev + ", virtual_account=" + virtual_account + "]";
+	}
+	
 }

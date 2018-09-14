@@ -116,7 +116,7 @@
 				data = data.substring(1); // 去除第一个字符
 			}
 	            data = $.parseJSON(data);
-	            console.log(data);
+	            
 		    if (data.code==0){
 			    	layer.alert("<span style='font-size: 22px;font-family: 微软雅黑;'>${ sessionScope.UserBean.depart_name}${ sessionScope.UserBean.name}您好, 您的帐户当前余额为："+data.virtual_account +"元</span>", {
 					title : '余额提醒',

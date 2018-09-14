@@ -2,149 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7dbc6c4-80f0-473d-a4ea-34ab725890ee" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/WebRoot/page/food/js_manager.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebRoot/page/food/js_manager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/js/menu_custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/js/menu_custom.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebRoot/json/navs.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/json/navs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/page/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/food/css/dc_add.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/page/food/css/dc_add.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/food/dc.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/food/dc_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/page/food/dc_add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/232.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/del_wtk_data_ajax.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/init.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/khxd_view.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/khxd_view.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/css/layui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/css/layui.mobile.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/css/modules/code.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/css/modules/laydate/default/laydate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/css/modules/layer/default/icon-ext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/css/modules/layer/default/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/css/modules/layer/default/layer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/css/modules/layer/default/loading-0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/css/modules/layer/default/loading-1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/css/modules/layer/default/loading-2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/font/iconfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/font/iconfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/font/iconfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/font/iconfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/10.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/11.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/12.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/13.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/14.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/15.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/16.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/17.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/18.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/19.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/20.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/21.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/22.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/23.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/24.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/25.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/26.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/27.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/28.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/29.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/30.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/31.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/32.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/33.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/34.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/35.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/36.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/37.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/38.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/39.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/4.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/40.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/41.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/42.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/43.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/44.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/45.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/46.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/47.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/48.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/49.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/5.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/50.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/51.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/52.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/53.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/54.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/55.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/56.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/57.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/58.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/59.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/6.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/60.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/61.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/62.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/63.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/64.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/65.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/66.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/67.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/68.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/69.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/7.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/70.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/71.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/8.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/images/face/9.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/lay/modules/carousel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/lay/modules/code.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/lay/modules/element.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/lay/modules/flow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/lay/modules/form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/lay/modules/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/lay/modules/laydate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/lay/modules/layedit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/lay/modules/layer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/lay/modules/laypage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/lay/modules/laytpl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/lay/modules/mobile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/lay/modules/table.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/lay/modules/tree.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/lay/modules/upload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/lay/modules/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/layui.all.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/layui/layui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/modify_wtk.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/modify_wtk.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/modify_wtk_ok_ajax.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/view_wtk.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/view_wtk.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/wt_count_interface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/wt_manager.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/wt_manager.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/wt_manager2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/wtk_add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/wtk_add.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/wtk_add_ok.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/wtk_manager.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/wtk_query.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/wtk_query.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/wtk_query_ok.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/wtk_to_excel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/zg_wtk.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/zg_wtk.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/page/wtk/zg_wtk_ok.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bjtu/gruop7/dao/MoneyDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bjtu/gruop7/dao/MoneyDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bjtu/gruop7/servlet/requestMoney.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bjtu/gruop7/dao/MoneyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bjtu/gruop7/dao/MoneyDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bjtu/gruop7/servlet/requestMoney.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/page/food/css/dc_add.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/page/food/css/layui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/page/food/css/skin/default/icon-ext.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/page/food/css/skin/default/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/page/food/css/skin/default/loading-0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/page/food/css/skin/default/loading-1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/page/food/css/skin/default/loading-2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/page/food/css/skin/layer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/page/food/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/page/food/test.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bjtu/gruop7/bean/UserBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bjtu/gruop7/bean/UserBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bjtu/gruop7/bean/UserBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bjtu/gruop7/bean/UserBean.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -158,22 +32,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="admin_dc_manager.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WebRoot/page/food/admin_dc_manager.html">
+      <file leaf-file-name="js_manager.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WebRoot/page/food/js_manager.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1177">
-              <caret line="98" lean-forward="true" selection-end-line="165" selection-end-column="7" />
+            <state relative-caret-position="484">
+              <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
               <folding>
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#div#1;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#hr#0;n#form#0;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#a#0;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#b#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#b#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#b#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="js_manager.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebRoot/page/food/js_manager.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="43" column="30" selection-end-line="138" selection-end-column="7" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -181,9 +64,21 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>content</find>
+      <find>layer</find>
+      <find>link</find>
+      <find>$value</find>
+      <find>js</find>
+      <find>img</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -195,6 +90,9 @@
         <option value="$PROJECT_DIR$/WebRoot/page/food/dc.html" />
         <option value="$PROJECT_DIR$/WebRoot/page/food/dc_add.jsp" />
         <option value="$PROJECT_DIR$/WebRoot/page/food/admin_dc_manager.html" />
+        <option value="$PROJECT_DIR$/WebRoot/page/food/test_ajax.html" />
+        <option value="$PROJECT_DIR$/WebRoot/page/food/js_manager.html" />
+        <option value="$PROJECT_DIR$/WebRoot/page/food/js_manager.jsp" />
       </list>
     </option>
   </component>
@@ -208,8 +106,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="479" />
-    <option name="y" value="67" />
+    <option name="x" value="28" />
+    <option name="y" value="1" />
     <option name="width" value="1616" />
     <option name="height" value="876" />
   </component>
@@ -220,33 +118,10 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="bjtuDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bjtuDemo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bjtuDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bjtuDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="WebRoot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bjtuDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bjtuDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="WebRoot" type="462c0819:PsiDirectoryNode" />
-              <item name="page" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -282,11 +157,13 @@
       <workItem from="1536681060629" duration="113000" />
       <workItem from="1536681205391" duration="1090000" />
       <workItem from="1536760686265" duration="3703000" />
+      <workItem from="1536884067718" duration="6073000" />
+      <workItem from="1536891180117" duration="3019000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4906000" />
+    <option name="totallyTimeSpent" value="13998000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -317,6 +194,24 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/WebRoot/page/food/test_ajax.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3838">
+          <caret line="101" column="28" lean-forward="true" selection-start-line="101" selection-start-column="28" selection-end-line="101" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/page/food/admin_dc_manager.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3724">
+          <caret line="98" lean-forward="true" selection-end-line="165" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/page/food/dc_add.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6004">
@@ -330,13 +225,7 @@
     <entry file="file://$PROJECT_DIR$/WebRoot/frame/layui/layui.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/page/food/dc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/page/food/dc.html" />
     <entry file="file://$PROJECT_DIR$/WebRoot/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -353,19 +242,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/page/food/admin_dc_manager.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1177">
-          <caret line="98" lean-forward="true" selection-end-line="165" selection-end-column="7" />
+        <state relative-caret-position="635">
+          <caret line="98" selection-end-line="165" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/page/food/test_ajax.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="101" column="28" lean-forward="true" selection-start-line="101" selection-start-column="28" selection-end-line="101" selection-end-column="28" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#1;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#hr#0;n#form#0;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#a#0;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/page/food/js/layer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/page/food/js_manager.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="43" column="30" selection-end-line="138" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/page/food/js_manager.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

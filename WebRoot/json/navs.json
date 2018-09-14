@@ -28,7 +28,7 @@
 		{
 			"title" : "结算管理",
 			"icon" : "&#xe63c;",
-			"href" : "page/wtk/wtk_manager.php",
+			"href" : "page/food/js_manager.jsp",
 			"spread" : false,
 			"lev":"dc-3"
 		}
