@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e7dbc6c4-80f0-473d-a4ea-34ab725890ee" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/WebRoot/json/navs.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/json/navs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/page/food/dc_log.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/page/food/dc_log.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,8 +20,8 @@
       <file leaf-file-name="dc_log.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebRoot/page/food/dc_log.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="494">
+              <caret line="120" column="64" lean-forward="true" selection-start-line="120" selection-start-column="64" selection-end-line="120" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -42,6 +43,11 @@
       <find>$value</find>
       <find>js</find>
       <find>img</find>
+      <find>titl</find>
+      <find>s</find>
+      <find>select</find>
+      <find>dc_lb</find>
+      <find>查询类别</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -123,12 +129,12 @@
       <workItem from="1536760686265" duration="3703000" />
       <workItem from="1536884067718" duration="6073000" />
       <workItem from="1536891180117" duration="3019000" />
-      <workItem from="1536933631902" duration="125000" />
+      <workItem from="1536933631902" duration="8834000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14123000" />
+    <option name="totallyTimeSpent" value="22832000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -222,13 +228,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/page/food/admin_dc_manager.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="98" selection-end-line="165" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/page/food/test_ajax.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -237,7 +236,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/page/food/js/layer.js">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/page/food/js_manager.jsp">
       <provider selected="true" editor-type-id="text-editor">
@@ -248,8 +253,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/page/food/js_manager.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="43" column="30" selection-end-line="138" selection-end-column="7" />
+        <state relative-caret-position="255">
+          <caret line="104" column="6" lean-forward="true" selection-start-line="104" selection-start-column="6" selection-end-line="104" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -259,10 +264,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/page/food/admin_dc_manager.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="127" selection-start-line="127" selection-end-line="164" selection-end-column="9" />
+          <folding>
+            <element signature="n#script#1;n#!!top" />
+            <element signature="n#style#0;n#b#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/page/food/dc_log.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="494">
+          <caret line="120" column="64" lean-forward="true" selection-start-line="120" selection-start-column="64" selection-end-line="120" selection-end-column="64" />
         </state>
       </provider>
     </entry>

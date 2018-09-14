@@ -36,7 +36,7 @@
 		{
 			"title" : "日志查询",
 			"icon" : "&#xe615;",
-			"href" : "page/wtk/wtk_query.php",
+			"href" : "page/food/dc_log.html",
 			"spread" : false,
 			"lev":"dc-4"
 		}
