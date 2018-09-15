@@ -18,7 +18,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>智慧生活 在线订餐</title>
-
 </head>
 <link rel="stylesheet" href="./css/dc_add.css">
 <link rel="stylesheet" href="./bs3/css/bootstrap.min.css">

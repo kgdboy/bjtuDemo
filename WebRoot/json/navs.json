@@ -36,7 +36,7 @@
 		{
 			"title" : "日志查询",
 			"icon" : "&#xe615;",
-			"href" : "page/food/dc_log.html",
+			"href" : "page/food/dc_log.jsp",
 			"spread" : false,
 			"lev":"dc-4"
 		}

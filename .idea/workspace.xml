@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7dbc6c4-80f0-473d-a4ea-34ab725890ee" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebRoot/json/navs.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/json/navs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/page/food/dc_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/page/food/dc_add.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebRoot/page/food/dc_log.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/page/food/dc_log.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,8 +22,8 @@
       <file leaf-file-name="dc_log.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebRoot/page/food/dc_log.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="120" column="64" lean-forward="true" selection-start-line="120" selection-start-column="64" selection-end-line="120" selection-end-column="64" />
+            <state relative-caret-position="407">
+              <caret line="116" column="76" lean-forward="true" selection-start-line="116" selection-start-column="76" selection-end-line="116" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -48,6 +50,10 @@
       <find>select</find>
       <find>dc_lb</find>
       <find>查询类别</find>
+      <find>script</find>
+      <find>lay</find>
+      <find>sessio</find>
+      <find>session</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -129,16 +135,15 @@
       <workItem from="1536760686265" duration="3703000" />
       <workItem from="1536884067718" duration="6073000" />
       <workItem from="1536891180117" duration="3019000" />
-      <workItem from="1536933631902" duration="8834000" />
+      <workItem from="1536933631902" duration="16540000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22832000" />
+    <option name="totallyTimeSpent" value="30538000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -279,8 +284,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/page/food/dc_log.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="120" column="64" lean-forward="true" selection-start-line="120" selection-start-column="64" selection-end-line="120" selection-end-column="64" />
+        <state relative-caret-position="407">
+          <caret line="116" column="76" lean-forward="true" selection-start-line="116" selection-start-column="76" selection-end-line="116" selection-end-column="76" />
         </state>
       </provider>
     </entry>

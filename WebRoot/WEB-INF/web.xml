@@ -49,8 +49,19 @@
     <servlet-name>RequestReckoningServlet</servlet-name>
     <servlet-class>bjtu.gruop7.servlet.RequestReckoningServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TestLogServlet</servlet-name>
+    <servlet-class>bjtu.gruop7.servlet.TestLogServlet</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>RequestReckoningServlet</servlet-name>
     <url-pattern>/RequestReckoningServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TestLogServlet</servlet-name>
+    <url-pattern>/TestLogServlet</url-pattern>
   </servlet-mapping>
 </web-app>
