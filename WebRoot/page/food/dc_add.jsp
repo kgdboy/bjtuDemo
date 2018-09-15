@@ -307,9 +307,9 @@
 					closeBtn : 1, //不显示关闭按钮
 					anim : 4, //动画类型
 					shadeClose : true, //开启遮罩关闭
-					area : [ '80%', '80%' ],
+					area : [ '90%', '100%' ],
 					maxmin : true, //开启最大化最小化按钮
-					content : './view_sp.php' //iframe的url
+					content : './view_sp.html' //iframe的url
 				});
 			})
 		})

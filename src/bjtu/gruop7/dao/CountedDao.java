@@ -68,7 +68,7 @@ public class  CountedDao {
 			cm.setVirtual_account(re.getInt("info_user.virtual_account"));
 			list.add(cm);
 			}		
-			
+		jdbcUtils.free(conn, pre, re);
 			if(list.size()==0){
 				return null;
 			}else{
@@ -97,6 +97,7 @@ public class  CountedDao {
 //			Connection conn = jdbcUtils.getConnection();
 //			PreparedStatement pre = conn.prepareStatement(sql);
 //			pre.executeUpdate();
+		
 		if(a>0)return true;
 		else {
 			return false;

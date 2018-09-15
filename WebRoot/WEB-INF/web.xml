@@ -9,17 +9,14 @@
     <servlet-name>RequestMoneyServlet</servlet-name>
     <servlet-class>bjtu.gruop7.servlet.RequestMoneyServlet</servlet-class>
   </servlet>
-   <servlet>
+  <servlet>
     <servlet-name>ReservationMealServlet</servlet-name>
     <servlet-class>bjtu.gruop7.servlet.ReservationMealServlet</servlet-class>
   </servlet>
-  
-  <!-- 徐志成新增 -->
   <servlet>
     <servlet-name>AccountResetServlet</servlet-name>
     <servlet-class>bjtu.gruop7.servlet.AccountResetServlet</servlet-class>
   </servlet>
-  
   <servlet-mapping>
     <servlet-name>SignInServlet</servlet-name>
     <url-pattern>/SignInServlet</url-pattern>
@@ -28,12 +25,10 @@
     <servlet-name>RequestMoneyServlet</servlet-name>
     <url-pattern>/RequestMoneyServlet</url-pattern>
   </servlet-mapping>
-  <!-- 0914新增  -->
   <servlet-mapping>
     <servlet-name>ReservationMealServlet</servlet-name>
     <url-pattern>/ReservationMealServlet</url-pattern>
   </servlet-mapping>
-  <!-- 徐志成新增  -->
   <servlet-mapping>
     <servlet-name>AccountResetServlet</servlet-name>
     <url-pattern>/AccountResetServlet</url-pattern>
@@ -66,7 +61,6 @@
     <servlet-name>TestLogServlet</servlet-name>
     <servlet-class>bjtu.gruop7.servlet.TestLogServlet</servlet-class>
   </servlet>
-
   <servlet-mapping>
     <servlet-name>RequestReckoningServlet</servlet-name>
     <url-pattern>/RequestReckoningServlet</url-pattern>
@@ -74,5 +68,26 @@
   <servlet-mapping>
     <servlet-name>TestLogServlet</servlet-name>
     <url-pattern>/TestLogServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TestReturnDepartServlet</display-name>
+    <servlet-name>TestReturnDepartServlet</servlet-name>
+    <servlet-class>bjtu.gruop7.servlet.TestReturnDepartServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TestReturnNameServlet</servlet-name>
+    <servlet-class>bjtu.gruop7.servlet.TestReturnNameServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>TestReturnDepartServlet</servlet-name>
+    <url-pattern>/TestReturnDepartServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TestReturnNameServlet</servlet-name>
+    <url-pattern>/TestReturnNameServlet</url-pattern>
   </servlet-mapping>
 </web-app>

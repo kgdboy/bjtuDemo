@@ -150,11 +150,11 @@
                     , limits: [15, 25, 35, 45, 55, 65, 75]//选择第多少页
                     , method: 'post'//传输方式
                     , cols: [[ //表头
-                        {field: 'xh', title: '序号', width: 100, sort: true, fixed: 'left', type: 'numbers'}
+                          {field: 'id', title: '序号', width: 100, sort: true, fixed: 'left', type: 'numbers'}
                         , {field: 'name', title: '姓名', align: 'center', id: 'message',width: 120}
-                        , {field: 'rq', title: '日期', width:200, align: 'center',sort:true}
-                        , {field: 'lb',title: '操作类别',width: 120,align: 'center'}
-                        , {field: 'xw',title: '操作形为',align: 'center'}
+                        , {field: 'log_date', title: '日期', width:200, align: 'center',sort:true}
+                        , {field: 'log_category',title: '操作类别',width: 120,align: 'center'}
+                        , {field: 'log_content',title: '操作形为',align: 'center'}
                     ]],
                     even:true,  //是否开启隔行换色
                     size:'lg' //表格大小控制

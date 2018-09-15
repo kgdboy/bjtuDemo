@@ -11,7 +11,7 @@ public class UserDao {
 	}
 
 	/**
-	 * 登陆
+	 * 返回部门名
 	 * 
 	 * @param username
 	 * @param password

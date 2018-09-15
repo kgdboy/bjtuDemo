@@ -141,7 +141,7 @@
         </div>
         <input type="button" style="width: 90px;" class="layui-btn layui-bg-green" value="订餐查询" id="dc_cx">
         <!--订餐查询-->
-      <input type="button" style="width: 90px;" class="layui-btn layui-bg-red" value="退餐管理" id="tc_cx">
+      <input type="button" style="width: 90px;" class="layui-btn layui-bg-red" value="退费管理" id="tf">
       <input type="button" style="width: 90px;" class="layui-btn layui-bg-blue" value=" 菜谱维护 " id="cp">
       <input type="button" style="width: 90px;" class="layui-btn layui-bg-orange" value="后台订餐" id="admin_dc">
 
@@ -203,9 +203,15 @@
         $("#admin_dc").click(function() {
             window.location.href = './admin_dc.php';
         })
-        $("#tc").click(function() {
-            window.location.href = './admin_tf.php';
+        $("#tf").click(function() {
+            window.location.href = './admin_tf.html';
         })
+        $("#cp").click(function() {
+            window.location.href = './admin_add_sp.html';
+        })  
+        
+
+        
 
     })
 </script>

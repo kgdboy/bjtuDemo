@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>食堂管理员——食谱维护</title>
+</head>
+<style>
+	body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th { margin:0; padding:0; };
+	.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
+	.clearfix { *zoom:1; }
+	body{
+		background:url("./img/yzgs_bg.gif");
+
+	}
+	#wrap{
+		width: 1000px;
+		margin: 10px auto;
+		font:17px/17px '微软雅黑';
+	}
+	#title_gif{
+		text-align: center;
+		margin-bottom: 20px;
+
+	}
+	#wrap #content{
+		border:none;
+		margin: 0 auto;
+		text-align: center;
+
+	}
+	.table{
+		border:2px solid #000;
+	}
+	.table td{
+		border:2px solid #000;
+	}
+	.xq{
+		vertical-align: middle;text-align: center;
+	}
+	textarea{
+		resize: none;
+		font-size: 16px;
+		text-align: center;
+		vertical-align: middle;
+		display:block;
+	}
+</style>
+<script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+<script src="./bs3/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./bs3/css/bootstrap.min.css">
+
+<body>
+<div id="wrap" class="clearfix">
+	<div id="title_gif">
+		<img src="./img/yzgs.gif" alt=""/>
+	</div>
+	<div id="content">
+		<form  method="post">
+			<table class="table"  align="center" width="100%"  cellspacing="1" cellpadding="1">
+				<tr>
+					<td class="td1" style="width: 10%;"></td>
+					<td class="td2" style="width: 30%;">早 餐</td>
+					<td class="td3" style="width: 30%;">午 餐</td>
+					<td class="td4" style="width: 30%;">晚 餐</td>
+				</tr>
+				<tr class="xq">
+					<td rowspan="2" style="vertical-align: middle;text-align: center;">星期一</td>
+					<td><textarea placeholder="请填写菜品名称" name="zao[]"  cols="30" rows="3" >拌黄瓜，花生米，拌茄子，拌芹菜心</textarea></td>
+					<td><textarea placeholder="请填写菜品名称" name="wu[]"  cols="30" rows="3" >红烧鸡块，肉末土豆泥，韭菜炒豆泡，酸菜汤</textarea></td>
+					<td><textarea placeholder="请填写菜品名称" name="wan[]" cols="30" rows="3" >小拌菜、咸菜</textarea></td>
+				</tr>
+				<tr class="xq">
+					<td><textarea placeholder='请填写主食名称' name="zaoz[]"  cols="30" rows="2" >二米粥，花卷，鸡蛋</textarea></td>
+					<td><textarea placeholder='请填写主食名称' name="wuz[]"  cols="30" rows="2" >二米饭，花卷</textarea></td>
+					<td><textarea placeholder='请填写主食名称' name="wanz[]"  cols="30" rows="2" >猪肉水饺</textarea></td>
+				</tr>
+				<tr class="xq">
+					<td rowspan="2" style="vertical-align: middle;text-align: center">星期二</td>
+					<td><textarea placeholder="请填写菜品名称" name="zao[]"  cols="30" rows="3" >拌鸡腿蘑，拌素鸡，拌海带丝，拌土豆丝</textarea></td>
+					<td><textarea placeholder="请填写菜品名称" name="wu[]"  cols="30" rows="3" >糖醋燕鱼，麻辣豆腐，西兰花炒肉，小白菜丸子汤</textarea></td>
+					<td><textarea placeholder="请填写菜品名称" name="wan[]"  cols="30" rows="3" >咸菜、酸菜汤</textarea></td>			</tr>
+				<tr class="xq">
+					<td><textarea placeholder='请填写主食名称' name="zaoz[]"  cols="30" rows="1" >二米粥，花卷，鸡蛋</textarea></td>
+					<td><textarea placeholder='请填写主食名称' name="wuz[]"  cols="30" rows="1" > 黑米饭，馒头</textarea></td>
+					<td><textarea placeholder='请填写主食名称' name="wanz[]"  cols="30" rows="1" >馒头</textarea></td>
+				</tr>
+				<tr class="xq">
+					<td rowspan="2" style="vertical-align: middle;text-align: center">星期三</td>
+					<td><textarea placeholder="请填写菜品名称" name="zao[]"  cols="30" rows="3" >拌海带裙，拌五香花生米，拌五香豆干，拌干豆腐</textarea></td>
+					<td><textarea placeholder="请填写菜品名称" name="wu[]"  cols="30" rows="3" > 干炸肉段，西红柿炒鸡蛋，蒜苔炒肉，窝瓜虾皮汤 </textarea></td>
+					<td><textarea placeholder="请填写菜品名称" name="wan[]"  cols="30" rows="3" >炖豆角、清炒肉 </textarea></td>			</tr>
+				<tr class="xq">
+					<td><textarea placeholder='请填写主食名称' name="zaoz[]"  cols="30" rows="1" >黑米粥，馒头，鸡蛋</textarea></td>
+					<td><textarea placeholder='请填写主食名称' name="wuz[]"  cols="30" rows="1" >米饭，花卷</textarea></td>
+					<td><textarea placeholder='请填写主食名称' name="wanz[]"  cols="30" rows="1" >烀饼</textarea></td>
+				</tr>
+				<tr class="xq">
+					<td rowspan="2" style="vertical-align: middle;text-align: center">星期四</td>
+					<td><textarea placeholder="请填写菜品名称" name="zao[]"  cols="30" rows="3" >拌芥菜块，木耳拌黄瓜，拌芹菜叶，拌豆泡</textarea></td>
+					<td><textarea placeholder="请填写菜品名称" name="wu[]"  cols="30" rows="3" >红烧肉土豆，白菜烧丸子，青椒炒鸡蛋，白菜豆腐汤</textarea></td>
+					<td><textarea placeholder="请填写菜品名称" name="wan[]"  cols="30" rows="3" >西红柿鸡蛋酱,香菇肉酱</textarea></td>			</tr>
+				<tr class="xq">
+					<td><textarea placeholder='请填写主食名称' name="zaoz[]"  cols="30" rows="1" >二米粥，花卷，鸡蛋</textarea></td>
+					<td><textarea placeholder='请填写主食名称' name="wuz[]"  cols="30" rows="1" >二米饭，花卷</textarea></td>
+					<td><textarea placeholder='请填写主食名称' name="wanz[]"  cols="30" rows="1" >面条</textarea></td>
+				</tr>
+				<tr class="xq">
+					<td rowspan="2" style="vertical-align: middle;text-align: center">星期五</td>
+					<td><textarea placeholder="请填写菜品名称" name="zao[]"  cols="30" rows="3" >炝拌笋尖，葱油干豆腐，蒜蓉瓜条，炸花生米</textarea></td>
+					<td><textarea placeholder="请填写菜品名称" name="wu[]"  cols="30" rows="3" >口水鸡，土豆烧豆角，菜花炒肉片，紫菜蛋花汤</textarea></td>
+					<td><textarea placeholder="请填写菜品名称" name="wan[]"  cols="30" rows="3" >拌菜、咸菜</textarea></td>
+				</tr>
+				<tr class="xq">
+					<td><textarea placeholder="请填写主食名称" name="zaoz[]"  cols="30" rows="1" >二米粥，馒头，鸡蛋</textarea></td>
+					<td><textarea placeholder="请填写主食名称" name="wuz[]"  cols="30" rows="1" >米饭，花卷</textarea></td>
+					<td><textarea placeholder="请填写主食名称" name="wanz[]"  cols="30" rows="1" >芹菜水饺</textarea></td>
+				</tr>
+			</table>
+			<div style="margin:0 auto" class="btn-group-lg btn-group">
+
+				<input class="btn btn-group-lg btn-danger" type="button" style="width: 300px;height: 50px;" value="重置菜品" id="resetmenu">
+				<input class="btn btn-group-lg btn-success" type="button" style="width: 300px;height: 50px;" value="重置主食" id="resetPrimary">
+				<input class="btn btn-group-lg btn-primary" type="button" style="width: 300px;height: 50px;" value="更新食谱" id="updatemenu">
+			</div>
+		</form>
+	</div>
+</div>
+</body>
+<script src="./layui/layui.js"></script>
+<script>
+layui.use([ 'layer', 'jquery', 'form' ], function() {
+        var layer = layui.layer,
+            form = layui.form,
+            laydate = layui.laydate,
+            $ = layui.$;
+            layer.msg("<span style='font-size:22px;color:green;'>亲爱的厨师长，秋天更适合吃些牛羊肉哦!</span>",{
+            	icon:6,
+            	shift:4,
+            	area:['500px','80px'],
+            	shade:0.8
+            });
+            $("#updatemenu").click(function(){
+            	layer.alert("菜谱更新成功");
+            })
+            $("#resetPrimary").click(function(){
+            	layer.alert("重置主食成功");
+            })
+            $("#resetmenu").click(function(){
+            	layer.alert("菜谱重置成功");
+            })
+           
+})
+</script>
+</html>
