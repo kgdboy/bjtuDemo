@@ -3,6 +3,7 @@ package bjtu.gruop7.dao;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+import bjtu.gruop7.util.Log;
 import bjtu.gruop7.util.SqlHelper;
 
 public class ReservationMealDao {
@@ -41,7 +42,7 @@ public class ReservationMealDao {
 		// TODO 自动生成的方法存根
 		ArrayList<Object> arrayList = new ArrayList<>();
 		String year = String.valueOf(calendar.get(Calendar.YEAR));
-		String month = String.valueOf(calendar.get(Calendar.MARCH));
+		String month = String.valueOf(calendar.get(Calendar.MARCH)+1);
 		String day = String.valueOf(calendar.get(Calendar.DAY_OF_MONTH));
 		String[] str = { orga_id, depart_id, salary_number, year, month, day, reservation_category,
 				String.valueOf(deduct_money) };
@@ -52,6 +53,7 @@ public class ReservationMealDao {
 				str);
 		if(arrSelect.size()>0){
 			newVirtualAccount = virtual_account;
+			new Log(salary_number,"订餐","操作失败，已订餐！现余额为："+newVirtualAccount+"元。");
 			arrayList.add(1);
 			arrayList.add("订餐失败，您已订餐！");
 			arrayList.add(newVirtualAccount);
@@ -69,6 +71,7 @@ public class ReservationMealDao {
 
 		} else {
 			newVirtualAccount = virtual_account;
+			new Log(salary_number,"订餐","操作失败，餐别为:"+reservation_category+",价格为："+deduct_money+"元。现余额为："+newVirtualAccount+"元。");
 			arrayList.add(1);
 			arrayList.add("订餐失败，这条sql语句没有插入进去");
 			arrayList.add(newVirtualAccount);
@@ -76,10 +79,12 @@ public class ReservationMealDao {
 		}
 		if (tag2 > 0) {
 			newVirtualAccount = virtual_account - deduct_money;
+			new Log(salary_number,"订餐","操作成功，已从账户余额中扣款，餐别为:"+reservation_category+",价格为："+deduct_money+"元。现余额为："+newVirtualAccount+"元。");
 			arrayList.add(0);
-			arrayList.add("订餐成功，从账户余额扣除");
+			arrayList.add("订餐成功，已从账户余额中扣款");
 		} else {
 			newVirtualAccount = virtual_account;
+			new Log(salary_number,"订餐","操作成功，但从未账户余额扣除，餐别为:"+reservation_category+",价格为："+deduct_money+"元。现余额为："+newVirtualAccount+"元。");
 			arrayList.add(1);
 			arrayList.add("订餐成功，但从未账户余额扣除");
 		}
@@ -99,7 +104,7 @@ public class ReservationMealDao {
 		// TODO 自动生成的方法存根
 		ArrayList<Object> arrayList = new ArrayList<>();
 		String year = String.valueOf(calendar.get(Calendar.YEAR));
-		String month = String.valueOf(calendar.get(Calendar.MARCH));
+		String month = String.valueOf(calendar.get(Calendar.MARCH)+1);
 		String day = String.valueOf(calendar.get(Calendar.DAY_OF_MONTH));
 		String[] str = { orga_id, depart_id, salary_number, year, month, day, reservation_category,
 				String.valueOf(deduct_money),"否"};
@@ -110,6 +115,7 @@ public class ReservationMealDao {
 				str);
 		if(arrSelect.size()<=0){
 			newVirtualAccount = virtual_account;
+			new Log(salary_number,"订餐","操作失败，未订餐！现余额为："+newVirtualAccount+"元。");
 			arrayList.add(1);
 			arrayList.add("抱歉，您还没有订餐！");
 			arrayList.add(newVirtualAccount);
@@ -131,16 +137,19 @@ public class ReservationMealDao {
 		} else {
 			newVirtualAccount = virtual_account;
 			arrayList.add(1);
+			new Log(salary_number,"退餐","操作失败，餐别为:"+reservation_category+",价格为："+deduct_money+"元。现余额为："+newVirtualAccount+"元。");
 			arrayList.add("退餐失败，这条sql语句没有插入进去");
 			arrayList.add(newVirtualAccount);
 			return arrayList;
 		}
 		if (tag2 > 0) {
 			newVirtualAccount = virtual_account + deduct_money;
+			new Log(salary_number,"退餐","操作成功，已将扣款返回至账户，餐别为:"+reservation_category+",价格为："+deduct_money+"元。现余额为："+newVirtualAccount+"元。");
 			arrayList.add(0);
 			arrayList.add("退餐成功，已将扣款返回至账户");
 		} else {
 			newVirtualAccount = virtual_account;
+			new Log(salary_number,"退餐","操作成功，但未将扣款返回至账户，餐别为:"+reservation_category+",价格为："+deduct_money+"元。现余额为："+newVirtualAccount+"元。");
 			arrayList.add(1);
 			arrayList.add("退餐成功，但未将扣款返回至账户");
 		}

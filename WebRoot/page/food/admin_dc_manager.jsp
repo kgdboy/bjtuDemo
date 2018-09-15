@@ -109,9 +109,7 @@
   .layui-select-title{
   	width:140px;
   }
-  .b3{
-  		width:600px;
-  }
+  
 </style>
 
 <body>
@@ -152,22 +150,9 @@
     </div>
      <hr style="height: 3px;background: #009688;">
     <div id="show_block">
-      <div class="b1">123123</div>
-      <div class="b2">123123</div>
-      <div class="b3">123123123123123123123
-      1231231231231231231231231231231231
-      231231231231231231231231231231231231231231
-      2312312312312312312312312312312312312312312312
-      3123123123123123123123123123123123123123123123
-      1231231231231231231231231231231231231231231231
-      2312312312312312312312312312312312312312312312312
-      3123123123123123123123123123123123123123123123123123
-      12312312312312312312312312312312312312312312312312312
-      31231231231231231231231231231231231231231231231231231
-      23123123123123123123123123123123123123123123123123123
-      123123123123123123123123123123123123123123123123123123
-      123123123123123123123123123123123123123123123123123123
-      123123123123123123123123123123123123123123123123123123123123123123123</div>
+      <div class="b1"></div>
+      <div class="b2"></div>
+      <div class="b3"></div>
     </div>
   </div>
 </body>
@@ -183,25 +168,26 @@
             elem : '#dc_date' //指定元素
         });
         $("#dc_date").val(new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate());
-        $("#cx").click(function() {
+        $("#dc_cx").click(function() {
+        	var dc_date = $("#dc_date").val(); //订餐日期
+        	var dc_lb = $("#dc_lb").val(); //订餐类别
             //发送ajax请求
-            $.post("admin_dccx_ajax.php", {
-                year : $("#year").val(),
-                month : $("#month").val(),
-                day : $("#day").val(),
-                cb : $("#cb").val()
-            }, function(result) {
-                //                console.log(result);
-                var code = JSON.parse(result);
-                //                console.log(code);
-                $(".b1").html($("#year").val() + '年' + $("#month").val() + '月' + $("#day").val() + '日' + '预订' + "<b style='text-align: center;color:red';>" + $("#cb").val() + "</b>" + '的总人数为: ' + code[0] + ' 人。').css('border-bottom', '3px solid red');
-                $(".b2").html('<b style="text-align: center;color:blue;">各部门订餐情况如下</b> <br/><br/>' + code[1]).css('border-bottom', '3px solid red');
-                $(".b3").html('<b style="text-align: center;color:blue;">各部门订餐人员如下</b> <hr>' + code[2]).css('border-bottom', '3px solid red');
+            $.post("${pageContext.request.contextPath}/RequestReservationDetialServlet", {
+                orga_id :'${sessionScope.UserBean.orga_id}',
+                reservation_date : dc_date,
+                reservation_category:dc_lb
+            }, function(data) {
+
+                var data = JSON.parse(data);
+
+                $(".b1").html($("#dc_date").val() + '预订' + "<b style='text-align: center;color:red';>" + $("#dc_lb").val() + "</b>" + '的总人数为: ' + data.count + ' 人。').css('border-bottom', '3px solid red');
+                $(".b2").html('<b style="text-align: center;color:blue;">各部门订餐情况如下</b> <br/><br/>' + data.dept_info).css('border-bottom', '3px solid red');
+                $(".b3").html('<b style="text-align: center;color:blue;">各部门订餐人员如下</b> <br/><br/>' + data.person_info).css('border-bottom', '3px solid red');
 
             });
         })
         $("#admin_dc").click(function() {
-            window.location.href = './admin_dc.html';
+            window.location.href = './admin_dc.jsp';
         })
         $("#tf").click(function() {
             window.location.href = './admin_tf.jsp';

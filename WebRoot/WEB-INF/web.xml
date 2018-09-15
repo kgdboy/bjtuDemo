@@ -17,6 +17,12 @@
     <servlet-name>AccountResetServlet</servlet-name>
     <servlet-class>bjtu.gruop7.servlet.AccountResetServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>RequestReservationDetialServlet</servlet-name>
+    <servlet-class>bjtu.gruop7.servlet.RequestReservationDetialServlet</servlet-class>
+  </servlet>
+  <!-- 李辛平新增明细 -->
+
   <servlet-mapping>
     <servlet-name>SignInServlet</servlet-name>
     <url-pattern>/SignInServlet</url-pattern>
@@ -33,6 +39,12 @@
     <servlet-name>AccountResetServlet</servlet-name>
     <url-pattern>/AccountResetServlet</url-pattern>
   </servlet-mapping>
+  <!-- 李辛平新增 -->
+  <servlet-mapping>
+    <servlet-name>RequestReservationDetialServlet</servlet-name>
+    <url-pattern>/RequestReservationDetialServlet</url-pattern>
+  </servlet-mapping>
+
   <welcome-file-list>
     <welcome-file>login.html</welcome-file>
   </welcome-file-list>

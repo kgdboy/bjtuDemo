@@ -95,11 +95,13 @@
 	//部门改变刷新人员
         $("#bm").change(function(){
         $("#salary_num").val("");//改变部门时清空工资号
+        var bm = $("#bm").val();
         $(".ye").html(0);
         	 //${pageContext.request.contextPath} ${sessionScope.UserBean.orga_id}
             $.post("${pageContext.request.contextPath}/TestReturnNameServlet",
                 {
-                    "orga_id":'${sessionScope.UserBean.orga_id}'
+                    "orga_id":'${sessionScope.UserBean.orga_id}',
+                    "depart_name":bm
                 },
                 function(data){
                     var data = data.split(",");   

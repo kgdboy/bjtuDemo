@@ -1,5 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<%@ page language="java" import="java.util.*,bjtu.gruop7.bean.UserBean"
+	pageEncoding="UTF-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+	//判断session信息
+	HttpSession sn = request.getSession();
+	UserBean bean = (UserBean) sn.getAttribute("UserBean");
+	String lev = bean.getLev();
+	/* System.out.println(lev); */
+	if (bean == null) {
+		response.sendRedirect(request.getContextPath() + "/login.html");
+	}
+%>
+<!DOCTYPE html>
+<html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>管理员充值</title>
@@ -62,9 +77,9 @@
  	(function(){
 		$(".ye").html(0);
             //${pageContext.request.contextPath} ${sessionScope.UserBean.orga_id}
-            $.post("../../TestReturnDepartServlet",
+            $.post("${pageContext.request.contextPath}/TestReturnDepartServlet",
                 {
-                    "orga_id":'1'
+                    "orga_id":'${sessionScope.UserBean.orga_id}'
                 },
                 function(data){
                     var data = data.split(",");
@@ -79,11 +94,13 @@
 	//部门改变刷新人员
         $("#bm").change(function(){
         $("#salary_num").val("");//改变部门时清空工资号
+        var bm = $("#bm").val();
         $(".ye").html(0);
         	 //${pageContext.request.contextPath} ${sessionScope.UserBean.orga_id}
-            $.post("../../TestReturnNameServlet",
+            $.post("${pageContext.request.contextPath}/TestReturnNameServlet",
                 {
-                    "orga_id":'1'
+                    "orga_id":'${sessionScope.UserBean.orga_id}',
+                    "depart_name":bm
                 },
                 function(data){
                     var data = data.split(",");   
@@ -104,7 +121,7 @@
          var salary_num = $("#salary_num").val();
          console.log("'"+salary_num+"'");
          //${pageContext.request.contextPath} 
-           $.post("../../RequestMoneyServlet",{"salary_number":salary_num},function(data){
+           $.post("${pageContext.request.contextPath}/RequestMoneyServlet",{"salary_number":salary_num},function(data){
                     $(".ye").html(JSON.parse(data).virtual_account);
                     $("#tid").val(JSON.parse(data)[0]);
            });
@@ -152,7 +169,7 @@
                 		je=2;
                 }
                 //发送AJAX请求
-                $.post("../../ReservationMealServlet",{
+                $.post("${pageContext.request.contextPath}/ReservationMealServlet",{
 						"request_status":"订餐",
 						"reservation_category" :lb,
 						"salary_number":salary_num

@@ -83,6 +83,7 @@ tr th, td {
 		})
 		//当点击刷新人员时
 		$("#flush").click(function() {
+		
 			setTimeout(function(){downloadJSAtOnload();},1000);
 			var element = document.createElement("script");
 		    element.src = "./js/excelJs/jszip.js";
@@ -96,7 +97,8 @@ tr th, td {
 				 document.body.appendChild(element);
 			}
 			$("#generate-excel").removeAttr("disabled");
-			
+
+		
 		})
 		
 		//当点击帐户余额清零按钮时
