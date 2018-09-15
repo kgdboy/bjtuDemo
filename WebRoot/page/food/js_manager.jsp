@@ -63,10 +63,13 @@ tr th, td {
 		// SELECT Bm,Name,vmoney,gz_number from user where vmoney<0 ORDER BY Bm";
 		
     	
-		$.post("${pageContext.request.contextPath}/TestServlet",{
+		$.post("${pageContext.request.contextPath}/RequestReckoningServlet",{
 			"orga_id" : '${sessionScope.UserBean.orga_id}'
 		}, function(result) {
 			var code = JSON.parse(result);
+			console.log(code);
+
+			
 			var tablehtml = "<thead><tr><th>序号</th><th>部门</th><th>姓名</th><th>工资号</th><th>金额(元)</th></tr></thead>";
 			for (var i = 0,j=0; i < code.data.length; i++) {
 				tablehtml += "<tbody><tr style='text-align: center'><td>" + (++j) + "</td>" +
@@ -80,7 +83,20 @@ tr th, td {
 		})
 		//当点击刷新人员时
 		$("#flush").click(function() {
-			window.location.reload();
+			setTimeout(function(){downloadJSAtOnload();},1000);
+			var element = document.createElement("script");
+		    element.src = "./js/excelJs/jszip.js";
+		    document.body.appendChild(element);
+		    var element = document.createElement("script");
+		    element.src = "./js/excelJs/FileSaver.js";
+		    document.body.appendChild(element);
+		 	function downloadJSAtOnload() {
+			     var element = document.createElement("script");
+				 element.src = "./js/excelJs/demo.page.js";
+				 document.body.appendChild(element);
+			}
+			$("#generate-excel").removeAttr("disabled");
+			
 		})
 		
 		//当点击帐户余额清零按钮时
@@ -154,7 +170,7 @@ tr th, td {
 				<input type="button" style="width: 220px;margin-right: 50px"
 					class="btn btn-lg btn-info" value="刷新人员数据" id="flush"> <input
 					type="button" style="width: 220px;margin-right: 50px"
-					class="btn btn-lg btn-success" value="导出名单到Excel" id="generate-excel">
+					class="btn btn-lg btn-success" value="导出名单到Excel" disabled id="generate-excel">
 				<input type="button" style="width: 220px;margin-right: 50px"
 					class="btn btn-lg btn-danger" disabled value="帐户余额清零" id="clear">
 			</div>
@@ -173,20 +189,7 @@ tr th, td {
 <script>
 <!-- 引入excel导出js -->
  $(function(){
-	setTimeout(function(){downloadJSAtOnload();},1000);
-		var element = document.createElement("script");
-	    element.src = "./js/excelJs/jszip.js";
-	    document.body.appendChild(element);
-	    
-	    var element = document.createElement("script");
-	    element.src = "./js/excelJs/FileSaver.js";
-	    document.body.appendChild(element);
-
- 	function downloadJSAtOnload() {
-	     var element = document.createElement("script");
-		 element.src = "./js/excelJs/demo.page.js";
-		 document.body.appendChild(element);
-	}
+	
  })
 </script>
 </html>
