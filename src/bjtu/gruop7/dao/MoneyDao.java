@@ -17,13 +17,7 @@ public class MoneyDao {
 
 		ArrayList<Object> arr = new ArrayList<>();
 		bjtu.gruop7.util.SqlHelper sqlHelper = new bjtu.gruop7.util.SqlHelper();
-		// System.out.println("md:"+sqlHelper);
 		String[] str = { salary_number };
-		// System.out.println("%%%%%%%%%%%%%");
-		// System.out.println(salary_number);
-		// ArrayList<String[]> arrayList = sqlHelper.executeQuery("select * from
-		// info_user where salary_number=?",
-		// str);
 		ArrayList<String[]> arrayList = sqlHelper
 				.executeQuery("select virtual_account from " + "info_user where salary_number =?", str);
 		if (arrayList.size() > 0) {
@@ -37,6 +31,19 @@ public class MoneyDao {
 		}
 		arr.add(arrayList.get(0)[0]);
 		return arr;
+
+	}
+
+	public static Boolean requestTf(String salary_number, String je) {
+		bjtu.gruop7.util.SqlHelper sqlHelper = new bjtu.gruop7.util.SqlHelper();
+		String[] str = { je,salary_number};
+		int a = sqlHelper
+				.executeUpdate("update info_user set virtual_account=virtual_account-? where salary_number=?",str);
+		if(a>0){
+			return true;
+		}else {
+			return false;
+		}
 
 	}
 }

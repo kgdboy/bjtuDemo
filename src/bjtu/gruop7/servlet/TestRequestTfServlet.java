@@ -8,39 +8,32 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bjtu.gruop7.dao.DepartDao;
-import bjtu.gruop7.dao.NameDao;
-import net.sf.json.JSONArray;
+import bjtu.gruop7.dao.CountedDao;
+import bjtu.gruop7.dao.MoneyDao;
 import net.sf.json.JSONObject;
 
-public class TestReturnNameServlet extends HttpServlet {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+public class TestRequestTfServlet extends HttpServlet {
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("UTF-8");
-
+		MoneyDao moneyDao = new MoneyDao();
 		//前台获取传入的机构id值
-		String id = request.getParameter("orga_id") ;
-		
-		JSONArray jArray = new JSONArray();
+		String salary_number = request.getParameter("salary_number") ;
+		String je = request.getParameter("je") ;
 		JSONObject js = new JSONObject();
+		
+		Boolean result = MoneyDao.requestTf(salary_number,je);
+		
+		if(result){
+			js.put("code","0");
+			js.put("message", "正常！");
 
-		if("".equals(id)){
+		}else{
 			js.put("code","1");
-			js.put("message", "您所传入的值为空！");
-			//将错误信息传向前台
-			response.getWriter().print(jArray.toString());
-		}else{	
-			String namestr = NameDao.returnName(id);
-			response.getWriter().print(namestr);
-			
+			js.put("message", "清零没有成功！");
+
 		}
+		response.getWriter().print(js.toString());
 	}
-
 }
-
-

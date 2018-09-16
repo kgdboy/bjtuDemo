@@ -35,7 +35,6 @@ public class TestReturnDepartServlet extends HttpServlet {
 			response.getWriter().print(jArray.toString());
 		}else{		
 			String bmstr = DepartDao.returnDepartName(id);
-//			System.out.println(bmstr);
 			response.getWriter().print(bmstr);
 		}
 	}

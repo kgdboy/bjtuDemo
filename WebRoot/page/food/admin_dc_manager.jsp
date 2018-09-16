@@ -201,10 +201,10 @@
             });
         })
         $("#admin_dc").click(function() {
-            window.location.href = './admin_dc.php';
+            window.location.href = './admin_dc.html';
         })
         $("#tf").click(function() {
-            window.location.href = './admin_tf.html';
+            window.location.href = './admin_tf.jsp';
         })
         $("#cp").click(function() {
             window.location.href = './admin_add_sp.html';

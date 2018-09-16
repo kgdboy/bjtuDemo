@@ -101,17 +101,14 @@
          $("#name").change(function(){
          // 选择人员后添加工资号到隐藏域
          $("#salary_num").val($("#name").val().substr($("#name").val().indexOf('-')+1));
-         return false;
-            $.post("name_ajax.php",
-                {
-                    bm:$("#bm").val(),
-					name:$("#name").val()
-                },
-                function(data){
-//                    console.log(JSON.parse(data));
-                    $(".ye").html(JSON.parse(data)[1]);
+        
+         var salary_num = $("#salary_num").val();
+         console.log("'"+salary_num+"'");
+         //${pageContext.request.contextPath} 
+           $.post("../../RequestMoneyServlet",{"salary_number":salary_num},function(data){
+                    $(".ye").html(JSON.parse(data).virtual_account);
                     $("#tid").val(JSON.parse(data)[0]);
-                });
+           });
         }); 
         $("#cz").click(function () {
 			//如果没有选择部门或人员或id未获取弹出错误提示。
@@ -146,29 +143,33 @@
             }
             //所有验证都通过之后，询问用户,用户确定后发送AJAX请求到admin_tf_ajax.php
 			$("#bm").val()
-            layer.confirm('您确定要给'+$("#bm").val()+$("#name").val()+'退费 '+$("#je").val()+' 元吗?', {
+            layer.confirm('确定给'+$("#bm").val()+$("#name").val()+'退费 '+$("#je").val()+' 元吗?', {
                 title:'此次退费金额为'+$("#je").val()+'元',
                 icon:3,
                 skin: 'layui-layer-molv',
                 btn: ['确定','取消'] //按钮
             }, function(){
                 //发送AJAX请求
-                $.post("admin_tf_ajax.php",{bm:$("#bm").val(),name:$("#name").val(),id:$("#tid").val(),je:$("#je").val(),money:$(".ye").html()},function(result){
-                    var code = JSON.parse(result);
-                    if(code[0]==1){
+                var salary_num = $("#salary_num").val();
+                var je = $("#je").val();
+               $.post("../../TestRequestTfServlet",{"salary_number":salary_num,"je":je},function(data){
+                    var data = JSON.parse(data);
+                    console.log(data);
+                    
+                    if(data.code==1){
                         layer.alert(code[1], {
                             title:'很遗憾的提示您：',
                             icon: 2,
                             skin: 'layui-layer-molv'
                         });
-                    }else if(code[0]==0){
+                    }else if(data.code==0){
                         layer.alert('恭喜您,退费成功了。', {
-                            title:'本次退费后,您的余额为：'+code[1]+'元',
+                            title:'本次退费后,您的余额为：'+$(".ye").html()-je+'元',
                             icon: 1,
                             skin: 'layui-layer-molv'
                         });
                         //修改页面显示余额,否则无法进行同一人的二次退费
-						$(".ye").html(code[1]);
+						$(".ye").html($(".ye").html()-je);
                     }
                 });
             });
