@@ -41,8 +41,8 @@
 	.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
 	.clearfix { *zoom:1; }
 	body{
-		background:url("./img/logbg.png") no-repeat;
-		background-size: 100%;
+		background:url("./img/logbg.png") no-repeat 100% 100%;
+		background-size: 100% 100%;
 	}
 	#wrap{
 		width: 1250px;
@@ -104,8 +104,8 @@
 							<!--select-->
 							<select name="cx_lb" >
 								<option value=""> 请选择</option>
-								<option value="消费">消费</option>
-								<option value="退费">退费</option>
+								<option value="订餐">订餐</option>
+								<option value="退餐">退餐</option>
 								<option value="充值">充值</option>
 								<option value="其它">其它</option>
 							</select>
@@ -135,7 +135,7 @@
                 elem : '#cx_date' //指定元素
                 ,range: '~'
 				,value: new Date().getFullYear() + "-" + (new Date().getMonth()) + "-" + new Date().getDate()+" ~ "+ new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate()
-				,max:0
+				,max:1
                 ,calendar: true
         	});
             form.on('submit(cx)',function (data) {
@@ -145,7 +145,7 @@
                     , width: 1250
                     ,where:data.field
                     , id: 'idTest'
-                    , url: '${pageContext.request.contextPath}/TestLogServlet' //数据接口OperationLogServlet
+                    , url: '${pageContext.request.contextPath}/OperationLogServlet' //数据接口OperationLogServlet
                     , page: {theme: '#527B81', groups: 5, limit: 10, prev: '前一页', next: '下一页'} //开启分页
                     , limits: [15, 25, 35, 45, 55, 65, 75]//选择第多少页
                     , method: 'post'//传输方式
@@ -160,6 +160,10 @@
                     size:'lg' //表格大小控制
                 });
             });
+            $(function(){
+   
+            	$("#ok").trigger("click");
+            })
         })
 	</script>
 </html>

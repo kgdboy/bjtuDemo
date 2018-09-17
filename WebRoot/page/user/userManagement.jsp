@@ -142,7 +142,7 @@
                     ,{field: 'gz_number', title: '工资号码', width:100,align:'center'}
                     ,{field: 'tel', title: '手机号码', width: 130,align:'center'}
                     ,{field: 'isdel', title: '状态', width:70,align:'center'}
-                    ,{title: '操作', align:'center', toolbar: '#barDemo',width: <?php echo $lev==1?'240':'90'?>} //这里的toolbar值是模板元素的选择器
+                    ,{title: '操作', align:'center', toolbar: '#barDemo',width:200} //这里的toolbar值是模板元素的选择器
                 ]],
                 done:function (res, curr, count) {
                 },
@@ -207,11 +207,7 @@
                     });
                 }
             });
-            if (<?php echo $lev;?>){
-                var wg = '<a class="layui-btn layui-bg-green layui-btn-sm" lay-event="detail"><i class="layui-icon">&#xe660;</i>查看</a><a class="layui-btn layui-bg-cyan layui-btn-sm" lay-event="edit"><i class="layui-icon">&#xe6b2;</i>修改</a><a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="del"><i class="layui-icon">&#xe640;</i>删除</a>';
-            }else{
-                var wg ='<a class="layui-btn layui-bg-green layui-btn-sm" lay-event="detail"><i class="layui-icon">&#xe660;</i>查看</a>';
-            }
+           
             $("#barDemo").html(wg);
         })
     })
