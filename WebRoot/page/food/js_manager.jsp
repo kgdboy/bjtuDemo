@@ -118,6 +118,13 @@ tr th, td {
 						}
 				        data = $.parseJSON(data);
 						if (data.code == 0) {
+						//发送ajax请求解锁数据库
+							$.post("${pageContext.request.contextPath}/RequestLockServlet", {
+								"lock" : 0
+							}, function(data) {
+								var data = JSON.parse(data);
+								layer.alert(data.message);
+							})
 							layer.alert('帐户余额清零成功,3秒后自动刷新！');
 							$("#clear").attr('disabled', 'disabled');
 							setTimeout(function() {
@@ -184,14 +191,11 @@ tr th, td {
 			</div>
 		</div>
 	</div>
-	<input type="hidden" name="day" id="day" value="<?php echo $day;?>">
+
 </body>
 
 
 <script>
-<!-- 引入excel导出js -->
- $(function(){
-	
- })
+var contextPath="${pageContext.request.contextPath}";
 </script>
 </html>

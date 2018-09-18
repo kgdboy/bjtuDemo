@@ -62,9 +62,6 @@
 			<div class="layui-input-block">
 				<select name="departmentName" lay-verify="required" lay-search>
 					<option value="">选择部门</option>
-					<?php foreach ($zrdw as $value) {?>
-					<option value=<?php echo $value;?>><?php echo $value;?></option>
-					<?php }?>
 				</select>
 			</div>
 		</div>
@@ -73,9 +70,6 @@
 			<div class="layui-input-block">
 				<select name="duty" lay-verify="required" lay-search>
 					<option value="">选择职务</option>
-					<?php foreach ($khr_zw as $value) {?>
-					<option value=<?php echo $value;?>><?php echo $value;?></option>
-					<?php }?>
 				</select>
 			</div>
 		</div>

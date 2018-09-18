@@ -12,6 +12,13 @@
 				layer.alert('只能在每月15-18日之间导出数据');
 				return false;
 			}
+	    	//发送ajax 加锁
+	    	$.post(contextPath+"/RequestLockServlet",{
+	    		"lock" : 1
+			}, function(data) {
+				var data = JSON.parse(data);
+				layer.alert(data.message);
+	    	})
 	       
 	    });
 	

@@ -22,21 +22,21 @@
 		<div class="layui-form-item">
 			<label class="layui-form-label">登录名 ：</label>
 			<div class="layui-input-block">
-				<input type="text" id="loginName" name="loginName" class="layui-input " lay-verify="required" value="<?php echo $rzt[user]?>" readonly>
-				<input type="hidden" name="id" id="id" value="<?php echo $rzt[id]?>">
+				<input type="text" id="loginName" name="loginName" class="layui-input " lay-verify="required" value="" readonly>
+				<input type="hidden" name="id" id="id" value="">
 			</div>
 		</div>
 		<div class="layui-form-item">
 			<label class="layui-form-label">真实姓名：</label>
 			<div class="layui-input-block">
-				<input type="text" id="realName" name="realName" class="layui-input " lay-verify="required" value="<?php echo $rzt[name]?>">
+				<input type="text" id="realName" name="realName" class="layui-input " lay-verify="required" value="">
 			</div>
 		</div>
 		<div class="layui-form-item">
 			<label class="layui-form-label">所在部门：</label>
 			<div class="layui-input-block">
 				<select name="departmentName" lay-verify="required" lay-search>
-					<option value="<?php echo $rzt[bm]?>"><?php echo $rzt[bm]?></option>
+					<option value=""></option>
 				</select>
 			</div>
 		</div>
@@ -44,23 +44,20 @@
 			<label class="layui-form-label">选择职务：</label>
 			<div class="layui-input-block">
 				<select name="duty" lay-verify="required" lay-search>
-					<option value="<?php echo $rzt[zw]?>"><?php echo $rzt[zw]?></option>
-					<?php foreach ($khr_zw as $value) {?>
-					<option value=<?php echo $value;?>><?php echo $value;?></option>
-					<?php }?>
+					<option value=""></option>
 				</select>
 			</div>
 		</div>
 		<div class="layui-form-item">
 			<label class="layui-form-label">工资号码 ：</label>
 			<div class="layui-input-block">
-				<input type="text" id="salary_number" name="salary_number" class="layui-input " lay-verify="required|number" value="<?php echo $rzt[gz_number]?>">
+				<input type="text" id="salary_number" name="salary_number" class="layui-input " lay-verify="required|number" value="">
 			</div>
 		</div>
 		<div class="layui-form-item">
 			<label class="layui-form-label">电话号码 ：</label>
 			<div class="layui-input-block">
-				<input type="text" id="phone_number" name="phone_number" class="layui-input " lay-verify="required|phone" value="<?php echo $rzt[tel]?>">
+				<input type="text" id="phone_number" name="phone_number" class="layui-input " lay-verify="required|phone" value="">
 			</div>
 		</div>
 		<div class="layui-form-item">
@@ -68,7 +65,7 @@
 			    <label class="layui-form-label">用户权限 ：</label>
 			    <div class="layui-input-block">
 			      <!--各模块权限-->
-					<input type="text" id="lev" name="lev" class="layui-input " lay-verify="required" value="<?php echo $rzt[lev]?>">
+					<input type="text" id="lev" name="lev" class="layui-input " lay-verify="required" value="">
 			    </div>
 		    </div>
 		</div>
@@ -76,7 +73,7 @@
 			<label class="layui-form-label">允许登陆：</label>
 			<div class="layui-input-block">
 				<select name="userState" lay-verify="required" lay-search>
-					<option value="<?php echo $rzt[isdel]?>">当前状态：</option>
+					<option value="">当前状态：</option>
 					<option value="1">禁止登陆</option>
 					<option value="0">允许登陆</option>
 				</select>

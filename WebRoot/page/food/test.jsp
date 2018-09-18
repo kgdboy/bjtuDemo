@@ -21,23 +21,23 @@
 </head>
 <body>
 	 <%-- ${requestScope.user}  接bean对象  等同于<%=request.getAttribute("user")%>--%>
-  	<table border="1px solid #000">	
+  	<table border="1px solid #000">
   		<tr align="center">
-				<td style="width:100px;height:30px;">序号</td>
+				<td style="width:100px;height:30px;">1序号</td>
 				<td style="width:100px;height:30px;">id</td>
 		    	<td style="width:100px;height:30px;">姓名</td>
 		    	<td style="width:100px;height:30px;">部门</td>
 		    	<td style="width:100px;height:30px;">权限分组</td>
-		</tr>		
+		</tr>
 		<c:forEach items="${user}" var="rec" varStatus="status">
-			
+
 			<tr align="center">
 				<td style="width:100px;height:30px;">${status.index+1} </td>
 		    	<td>${rec.id}</td>
 		    	<td>${rec.name}</td>
 		    	<td>${rec.depart_name}</td>
 		    	<td>${rec.depart_name}</td>
-		    </tr>		
+		    </tr>
 		</c:forEach>
 	</table>
 </body>
