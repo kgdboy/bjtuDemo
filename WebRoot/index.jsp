@@ -40,9 +40,9 @@
 					<select name="modules" lay-verify="required" lay-search=""
 						lay-filter="search">
 						<option value="">直接选择或搜索选择</option>
-						<option value="wtk">问题库使用说明</option>
-						<option value="wtk">订餐系统使用说明</option>
-						<option value="wtk">网络报修系统使用说明</option>
+						<option value="doc">查看操作手册</option>
+						<option value="dc">查看本周菜谱</option>
+						<option value="log">快速日志查询</option>
 					</select> <i class="layui-icon">&#xe615;</i>
 				</div>
 				<!-- 天气信息 -->

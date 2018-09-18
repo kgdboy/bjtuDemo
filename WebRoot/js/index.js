@@ -354,11 +354,33 @@ layui.config({
 	})
 //监听主页的select动态
     form.on('select(search)', function(data){
-        layer.open({
-			type:2,
-			title:'标题',
-			content:'page/wtk/wtk_add.php'
-		})
+    	console.log(data);
+    	if(data.value=='dc'){
+	        layer.open({
+	        	type : 2,
+				title : '锦州供电段 智慧生活 网络订餐 ———— 一周食谱由办公室提供',
+				skin : 'layui-layer-demo', //样式类名
+				closeBtn : 1, //不显示关闭按钮
+				anim : 4, //动画类型
+				shadeClose : true, //开启遮罩关闭
+				area : [ '90%', '100%' ],
+				maxmin : true, //开启最大化最小化按钮
+				content : './page/food/view_sp.html' //iframe的url
+			})
+    	}
+    	if(data.value=='log'){
+	        layer.open({
+	        	type : 2,
+				title : '快速日志查询',
+				skin : 'layui-layer-demo', //样式类名
+				closeBtn : 1, //不显示关闭按钮
+				anim : 4, //动画类型
+				shadeClose : true, //开启遮罩关闭
+				area : [ '90%', '100%' ],
+				maxmin : true, //开启最大化最小化按钮
+				content : './page/food/dc_log.jsp' //iframe的url
+			})
+    	}
     });
 })
 
