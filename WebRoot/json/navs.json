@@ -42,6 +42,12 @@
 		}
 	]
 },{
+	"title" : "照片墙",
+	"icon" : "&#xe630;",
+	"href" : "page/img/view_img.html",
+	"spread" : false,
+	"lev":"photo"
+},{
 	"title" : "系统设置",
 	"icon" : "&#xe630;",
 	"href" : "",
